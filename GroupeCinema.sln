@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupeCinema", "GroupeCinema\GroupeCinema.csproj", "{0150DF54-A2EF-4E13-A8C0-7C031338C72B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfGroupeCinema", "WpfGroupeCinema\WpfGroupeCinema.csproj", "{7816FC24-0074-429C-8AFC-67A880FE6907}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaAPI", "CinemaAPI\CinemaAPI.csproj", "{113E6D1D-9F0F-47A4-AD91-562AD9D7E2C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0150DF54-A2EF-4E13-A8C0-7C031338C72B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0150DF54-A2EF-4E13-A8C0-7C031338C72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0150DF54-A2EF-4E13-A8C0-7C031338C72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0150DF54-A2EF-4E13-A8C0-7C031338C72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7816FC24-0074-429C-8AFC-67A880FE6907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7816FC24-0074-429C-8AFC-67A880FE6907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7816FC24-0074-429C-8AFC-67A880FE6907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7816FC24-0074-429C-8AFC-67A880FE6907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{113E6D1D-9F0F-47A4-AD91-562AD9D7E2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{113E6D1D-9F0F-47A4-AD91-562AD9D7E2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{113E6D1D-9F0F-47A4-AD91-562AD9D7E2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{113E6D1D-9F0F-47A4-AD91-562AD9D7E2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

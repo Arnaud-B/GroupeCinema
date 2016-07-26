@@ -1,0 +1,32 @@
+﻿<Page x:Class="WpfGroupeCinema.Views.EatableEnterView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfGroupeCinema.Views"
+      xmlns:userControl="clr-namespace:WpfGroupeCinema.CinemaListUserControl"
+      mc:Ignorable="d" 
+      Title="EatableEnterView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
+        <TextBox Grid.Row="1" Name="Name" Text="name"/>
+        <TextBox Grid.Row="2" Name="Price" Text="12" />
+        <!--<TextBox Grid.Row="3" Name="Temperature" Text="temperature" />-->
+        <TextBlock Grid.Row="3" Text="Temperature" />
+        <!--<RadioButton Grid.Row="3" Name="Temp" />-->
+        <Button x:Name="BtnAdd" Content="Add" Grid.Row="4" Click="BtnAdd_Click"/>
+        <Button x:Name="BtnHome" Content="Home" Grid.Row="5" Click="BtnNavigate2_Click"/>
+    </Grid>
+</Page>

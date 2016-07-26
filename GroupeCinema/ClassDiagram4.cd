@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GroupeCinema.Cinema.Address" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAIMAEACCAAAAAAAAgAAAAIAAAAAAAA=</HashCode>
+      <FileName>Cinema\Entities\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.EntityBase" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAAEAAAAAIAAAAAAAgAAAAAAIAAAAAAAAAgA=</HashCode>
+      <FileName>Cinema\Entities\Base\EntityBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Cinema" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIBAAAKAQQACAIEAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Cinema\Entities\Cinema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Movie" Collapsed="true">
+    <Position X="22.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAggAAAIIQAAAAEAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Cinema\Entities\Movie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Product" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAQAAAAAEAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cinema\Entities\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Drinkable" Collapsed="true">
+    <Position X="4.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Cinema\Entities\ProductCategory\Drinkable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Eatable" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAgAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAA=</HashCode>
+      <FileName>Cinema\Entities\ProductCategory\Eatable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Provider" Collapsed="true">
+    <Position X="17" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cinema\Entities\Provider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Productor" Collapsed="true">
+    <Position X="16" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Cinema\Entities\ProviderCategory\Productor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.ProductProvider" Collapsed="true">
+    <Position X="18.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQ=</HashCode>
+      <FileName>Cinema\Entities\ProviderCategory\ProductProvidor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.User" Collapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAhAAAAMBAAAAAQAAAIAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Cinema\Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Client" Collapsed="true">
+    <Position X="20.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAYAAAAAAAAEAAAABAAAAAAAAAAAAAIAAAAAAAAEAA=</HashCode>
+      <FileName>Cinema\Entities\UserCategory\Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Employee" Collapsed="true">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAEAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cinema\Entities\UserCategory\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroupeCinema.Cinema.Owner" Collapsed="true">
+    <Position X="13.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAAAAAAAEAAAAAAAAAAAACAAAAAgABAAAEAA=</HashCode>
+      <FileName>Cinema\Entities\UserCategory\Owner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

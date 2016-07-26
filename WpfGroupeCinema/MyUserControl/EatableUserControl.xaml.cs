@@ -1,0 +1,41 @@
+﻿using GroupeCinema.Cinema;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace WpfGroupeCinema.CinemaListUserControl
+{
+    /// <summary>
+    /// Interaction logic for ProductUserControl.xaml
+    /// </summary>
+    public partial class EatableUserControl : BaseUserControl
+    {
+        private Eatable eatable;
+
+        public Eatable Eatable
+        {
+            get { return eatable; }
+            set
+            {
+                eatable = value;
+                OnPropertyChanged("Eatbale");
+            }
+        }
+
+        public EatableUserControl()
+        {
+            InitializeComponent();
+            this.DataContext = this;
+        }
+    }
+}
