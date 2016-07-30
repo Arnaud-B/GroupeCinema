@@ -50,8 +50,9 @@ namespace WpfGroupeCinema.Views
 
         private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new HomeEnterView());
         }
+
         private async void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             InitializeComponent();
@@ -61,68 +62,57 @@ namespace WpfGroupeCinema.Views
 
             Cinema cinema = this.cinema;
 
-            Console.WriteLine(cinema.Name);
 
-     
-            Cinema cinemaChoose = new Cinema();
+            Eatable eatable = new Eatable();
+            eatable.Name = EatableEnterViewModel.EatableEnterView.Name.Text;
+            eatable.Price = Decimal.Parse(EatableEnterViewModel.EatableEnterView.Price.Text);
+            eatable.Number = Decimal.Parse(EatableEnterViewModel.EatableEnterView.Weight.Text);
+            eatable.Cinema_id = cinema.Id;
+            await Task.Factory.StartNew(() =>
+            {
+                WebServiceManager<Eatable> manager1 = new WebServiceManager<Eatable>(DataConnectionResource.LOCALAPI);
+                manager1.Post(eatable);
+            });
+            await Task.Factory.StartNew(() =>
+            {
+                MySQLManager<Eatable> manager = new MySQLManager<Eatable>(DataConnectionResource.LOCALAPI);
+                manager.Insert(eatable);
+            });
+
+
+            /*Cinema cinemaChoose = new Cinema();
             await Task.Factory.StartNew(() =>
             {
                 MySQLManager<Cinema> manager = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
                 cinemaChoose = manager.Get(cinema.Id).Result as Cinema;
             });
-            Console.WriteLine(cinemaChoose.Id);
-
-            GroupeCinema.Cinema.Eatable eatable = new Eatable();
-            eatable.Price = Decimal.Parse(EatableEnterViewModel.EatableEnterView.Price.Text);
-            eatable.Name = EatableEnterViewModel.EatableEnterView.Name.Text;
-            eatable.Temp = true;
-            eatable.BuyDate = DateTime.Now;
-
-
-            /*
-            Cinema cinemaTmp = new Cinema();
-            await Task.Factory.StartNew(() =>
-            {
-                WebServiceManager<Cinema> manager = new WebServiceManager<Cinema>(DataConnectionResource.LOCALAPI);
-                cinemaTmp = manager.Get(cinemaChoose.Id).Result as Cinema;
-            });
-            Console.WriteLine("Result API");
-            Console.WriteLine(cinemaTmp.Name);
-            */
-            /*
-            await Task.Factory.StartNew(() =>
-            {
-                WebServiceManager<Eatable> manager1 = new WebServiceManager<Eatable>(DataConnectionResource.LOCALAPI);
-                manager1.Post(eatable);
-                MySQLManager<Eatable> manager1 = new MySQLManager<Eatable>(DataConnectionResource.LOCALMYQSL);
-                manager1.Insert(eatable);
-
-            });
-            */
-
-
-            //cinemaChoose.Name = "Gaumont";
+            Console.WriteLine(cinemaChoose.Id);*/
 
             /*List<Eatable> eatables = new List<Eatable>();
-            eatables.Add(eatable);*/
-            /*cinemaChoose.Eatables = eatables;
-            Console.WriteLine(cinemaChoose.Eatables);*/
-            /*await Task.Factory.StartNew(() =>
-            {
-                MySQLManager<Cinema> manager5 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
-                manager5.Update(cinemaChoose);
-            });*/
+            eatables.Add(eatable);
+            cinemaChoose.Eatables = eatables;*/
+
+            MySQLManager<Cinema> manager5 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
+            //await manager5.Get(cinema.Id);
+            //manager5.DbSetT.Add(cinema);
+            //cinema.Name = "pouet";
+            var result = await manager5.Get(cinema.Id);
+         
+            result.Name = "pouet";
+            await manager5.Update(result);
+
+        
 
 
-            eatable.Cinema = cinemaChoose;
-            await Task.Factory.StartNew(() =>
-            {
-                MySQLManager<Eatable> manager1 = new MySQLManager<Eatable>(DataConnectionResource.LOCALMYQSL);
-                manager1.Insert(eatable);
-            });
-            //Console.WriteLine(cinemaChoose.Name);
-            //Console.WriteLine(cinemaChoose.Id);
-            //Console.WriteLine(cinemaChoose.Name);
+            /*Cinema cine = new Cinema();
+            cine.Name = "toto";
+            await manager5.Insert(cine);
+            cine.Name = "tata";
+            await manager5.Update(cine);*/
+
+;
+         
+
 
 
 

@@ -13,5 +13,6 @@ namespace WpfGroupeCinema
     /// </summary>
     public partial class App : Application
     {
+       
     }
 }

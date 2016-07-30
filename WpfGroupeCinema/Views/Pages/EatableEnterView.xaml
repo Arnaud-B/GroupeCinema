@@ -24,8 +24,8 @@
         <TextBox Grid.Row="1" Name="Name" Text="name"/>
         <TextBox Grid.Row="2" Name="Price" Text="12" />
         <!--<TextBox Grid.Row="3" Name="Temperature" Text="temperature" />-->
-        <TextBlock Grid.Row="3" Text="Temperature" />
-        <!--<RadioButton Grid.Row="3" Name="Temp" />-->
+        <TextBox Grid.Row="3" Text="11" Name="Weight" />
+ 
         <Button x:Name="BtnAdd" Content="Add" Grid.Row="4" Click="BtnAdd_Click"/>
         <Button x:Name="BtnHome" Content="Home" Grid.Row="5" Click="BtnNavigate2_Click"/>
     </Grid>

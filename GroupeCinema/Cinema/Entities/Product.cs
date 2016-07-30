@@ -14,8 +14,9 @@ namespace GroupeCinema.Cinema
         #region Attributes
         private String name;
         private Decimal price;
+        private Decimal number;
         private DateTime buyDate;
-        private Cinema cinema;
+        private Int32 cinema_id;
         #endregion
 
         #region Properties
@@ -53,6 +54,19 @@ namespace GroupeCinema.Cinema
                 this.OnPropertyChanged("Price");
             }
         }
+        public Decimal Number
+        {
+            get
+            {
+                return this.number;
+            }
+
+            set
+            {
+                this.number = value;
+                this.OnPropertyChanged("Number");
+            }
+        }
         public DateTime BuyDate
         {
             get
@@ -67,17 +81,17 @@ namespace GroupeCinema.Cinema
             }
         }
         //[ForeignKey("Cinema")]
-        public Cinema Cinema
+        public Int32 Cinema_id
         {
             get
             {
-                return this.cinema;
+                return this.cinema_id;
             }
 
             set
             {
-                this.cinema = value;
-                this.OnPropertyChanged("Cinema");
+                this.cinema_id = value;
+                this.OnPropertyChanged("Cinema_id");
             }
         }
 

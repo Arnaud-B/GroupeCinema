@@ -73,5 +73,10 @@ namespace WpfGroupeCinema.Views
                 Console.WriteLine(cinema.Finance);
             }
         }
+
+        private void BtnNavigate_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HomeEnterView());
+        }
     }
 }

@@ -22,6 +22,7 @@ namespace GroupeCinema.Database
         {
             this.DbSetT.Add(item);
             await this.SaveChangesAsync();
+            this.DbSetT.Remove(item);
             return item;
         }
         public async Task<IEnumerable<TEntity>> Insert(IEnumerable<TEntity> items)
@@ -31,21 +32,30 @@ namespace GroupeCinema.Database
                 this.DbSetT.Add(item);
             }
             await this.SaveChangesAsync();
+            this.DbSetT.RemoveRange(items);
             return items;
         }
+       
+
         public async Task<TEntity> Update(TEntity item)
         {
-            this.Entry<TEntity>(item);
+            await Task.Factory.StartNew(() =>
+            {
+                this.Entry<TEntity>(item).State = EntityState.Modified;
+            });
             await this.SaveChangesAsync();
             return item;
         }
 
         public async Task<IEnumerable<TEntity>> Update(IEnumerable<TEntity> items)
         {
-            foreach (var item in items)
+            await Task.Factory.StartNew(() =>
             {
-                this.Entry<TEntity>(item);
-            }
+                foreach (var item in items)
+                {
+                    this.Entry<TEntity>(item).State = EntityState.Modified;
+                }
+            });
             await this.SaveChangesAsync();
             return items;
         }

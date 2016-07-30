@@ -11,12 +11,12 @@ namespace GroupeCinema.Cinema
     public class Employee : User
     {
         #region Attributes
-        private Cinema cinema;
+        //private Cinema cinema;
         #endregion
 
         #region Properties
         //[ForeignKey("cinema_id")]
-        public Cinema Cinema
+        /*public Cinema Cinema
         {
             get
             {
@@ -27,7 +27,7 @@ namespace GroupeCinema.Cinema
                 cinema = value;
                 this.OnPropertyChanged("Cinema");
             }
-        }
+        }*/
 
         #endregion
 

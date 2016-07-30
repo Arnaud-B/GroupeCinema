@@ -11,12 +11,12 @@ namespace GroupeCinema.Cinema
     public class Owner : User
     {
         #region
-        private List<Cinema> cinemas;
+        //private List<Cinema> cinemas;
         private Decimal money;
         #endregion
 
         #region Properties
-        public List<Cinema> Cinemas
+        /*public List<Cinema> Cinemas
         {
             get
             {
@@ -28,7 +28,7 @@ namespace GroupeCinema.Cinema
                 this.cinemas = value;
                 this.OnPropertyChanged("Cinemas");
             }
-        }
+        }*/
         [Column("money")]
         public Decimal Money
         {

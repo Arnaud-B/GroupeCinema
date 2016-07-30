@@ -59,11 +59,7 @@ namespace WpfGroupeCinema.CinemaListUserControl
             }
         }
 
-        /*private void myBtn2_Click(object sender, RoutedEventArgs e)
-        {
-            Cinema cineSelected = (Cinema)cinemasListView.SelectedItem;
-            Console.WriteLine(cineSelected.Id);
-        }*/
+    
 
     }
 }

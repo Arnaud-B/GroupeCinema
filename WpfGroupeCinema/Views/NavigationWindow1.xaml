@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:WpfGroupeCinema.Views.Pages"
         mc:Ignorable="d"
         Title="Cinema" Height="800" Width="800"
-        Source="Pages/Page2.xaml">
+        Source="Pages/HomeEnterView.xaml">
 </NavigationWindow>

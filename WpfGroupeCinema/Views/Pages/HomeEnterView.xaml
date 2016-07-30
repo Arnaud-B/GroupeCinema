@@ -20,7 +20,7 @@
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="1" />
         <userControl:CinemaListUserControl x:Name="cinemaListUserControl" Grid.Row="2" />
-        <Button x:Name="myBtn" Grid.Row="3" Content="Choose" Click="myBtn_Click"/>
+        <Button x:Name="myBtn" Grid.Row="3" Content="Choose" FontSize="30" Click="myBtn_Click"/>
         <Button x:Name="btnPopulate" Content="Populate" Grid.Row="4"/>
     </Grid>
 </Page>

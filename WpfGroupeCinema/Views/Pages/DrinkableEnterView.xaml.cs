@@ -47,7 +47,7 @@ namespace WpfGroupeCinema.Views
 
         private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new HomeEnterView());
         }
     }
 }

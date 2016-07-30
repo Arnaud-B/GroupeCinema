@@ -38,7 +38,7 @@ namespace GroupeCinema.Database
         }
         #endregion
 
-        //public DbSet<Cinema> DbSetCinema { get; set; }
+        public DbSet<GroupeCinema.Cinema.Cinema> DbSetCinema { get; set; }
 
         //public DbSet<Product> DbSetProduct { get; set; }
         public DbSet<Drinkable> DbSetDrinkable { get; set; }

@@ -38,14 +38,8 @@ namespace WpfGroupeCinema.Views
 
         private void BtnNavigate1_Click(object sender, RoutedEventArgs e)
         {
-            //this.Content = new RegularClientEnterView();
             this.NavigationService.Navigate(new Page2());
         }
-        /*private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationWindow1 window = new NavigationWindow1();
-            window.Show();
-            //this.NavigationService.Navigate(new Page2());
-        }*/
+     
     }
 }

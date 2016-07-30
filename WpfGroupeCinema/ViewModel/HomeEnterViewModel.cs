@@ -1,4 +1,7 @@
-﻿using GroupeCinema.Cinema;
+﻿using GroupeCinema;
+using GroupeCinema.API;
+using GroupeCinema.Cinema;
+using GroupeCinema.Cinema.Entities;
 using GroupeCinema.Database;
 using GroupeCinema.Enums;
 using System;
@@ -32,6 +35,7 @@ namespace WpfGroupeCinema.ViewModel
 
             this.HomeEnterView.btnPopulate.Click += btnPopulate_Click;
 
+            //Logs();
 
             SetupCinemaList();
         }
@@ -42,8 +46,10 @@ namespace WpfGroupeCinema.ViewModel
             {
                 MySQLManager<Cinema> manager5 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
                 results = manager5.Get().Result as List<Cinema>;
+                
             });
-
+            
+           
             Console.WriteLine(results.Count);
             if (results != null)
             {
@@ -51,6 +57,15 @@ namespace WpfGroupeCinema.ViewModel
             }
 
         }
+
+        // Test Notif
+        public void Observabler()
+        {
+            ObservedClass obs = new ObservedClass();
+            NotifiedClass n1 = new NotifiedClass();
+            NotifiedClass n2 = new NotifiedClass();
+        }
+
         private void myBtn_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             //this.HomeEnterView.cinemaListUserControl
@@ -63,9 +78,15 @@ namespace WpfGroupeCinema.ViewModel
             {
                 Console.WriteLine((Cinema)e.AddedItems[0]);
                 this.homeEnterView.cinemaUserControl.Cinema = (Cinema)e.AddedItems[0];
-                // Navigation fiche cine
-                //this.homeEnterView.cinemaUserControl.Cinema = (Cinema)e.AddedItems[0];
+                
             }
+        }
+        
+        
+        private void Logs()
+        {
+            Logger logger = new Logger(LogMode.EXTERNAL, AlertMode.MESSAGE_BOX);
+            logger.Log("Test", "Bienvenue sur le groupement de cinema");
         }
 
         private async void btnPopulate_Click(object sender, System.Windows.RoutedEventArgs e)
@@ -105,7 +126,7 @@ namespace WpfGroupeCinema.ViewModel
                 productor.Firstname = "Jean";
                 productor.Lastname = "Moineau";
                 productor.CompanyName = "Gaumont";
-                productor.Address = address;
+                productor.Address_id = address.Id;
                 await Task.Factory.StartNew(() =>
                 {
                     MySQLManager<MovieProvider> manager4 = new MySQLManager<MovieProvider>(DataConnectionResource.LOCALMYQSL);
@@ -117,34 +138,42 @@ namespace WpfGroupeCinema.ViewModel
                 cinema.Id = 1;
                 cinema.Name = "cinema 1";
                 cinema.Finance = new decimal(10000);
-                cinema.Address = address;
+                cinema.Address_id = address.Id;
                 result.Add(cinema);
 
                 Cinema cinema1 = new Cinema();
                 cinema1.Id = 2;
                 cinema1.Name = "cinema 2";
                 cinema1.Finance = new Decimal(150000);
-                cinema1.Address = address;
+                cinema1.Address_id = address.Id;
                 result.Add(cinema1);
 
                 Cinema cinema2 = new Cinema();
                 cinema2.Id = 3;
                 cinema2.Name = "cinema 3";
                 cinema2.Finance = new decimal(105000);
-                cinema2.Address = address;
+                cinema2.Address_id = address.Id;
                 result.Add(cinema2);
 
                 Cinema cinema3 = new Cinema();
                 cinema3.Id = 4;
                 cinema3.Name = "cinema 4";
                 cinema3.Finance = new Decimal(200000);
-                cinema3.Address = address;
+                cinema3.Address_id = address.Id;
                 result.Add(cinema3);
                 await Task.Factory.StartNew(() =>
                 {
-                    MySQLManager<Cinema> manager4 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
-                    manager4.Insert(result);
+                    //MySQLManager<Cinema> manager4 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
+                    //manager4.Insert(result);     
+                    WebServiceManager<Cinema> manager4 = new WebServiceManager<Cinema>(DataConnectionResource.LOCALAPI);
+                    manager4.Post(result);               
                 });
+
+                //cinema3.Name = "GaumontTamere";
+              
+                //MySQLManager<Cinema> manager5 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
+                //await manager5.Update(cinema3);
+                
                 #endregion
             }
         }

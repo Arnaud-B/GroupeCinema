@@ -11,28 +11,23 @@ namespace GroupeCinema.Cinema
     public class Eatable : Product
     {
         #region Attributes
-        private Boolean temp;
-        //private Cinema cinema;
+        private Decimal weight;
         #endregion
 
         #region Properties
-        [Column("temp")]
-        public Boolean Temp
+        public Decimal Weight
         {
-            get { return temp; }
-            set { temp = value;
-                this.OnPropertyChanged("Temp");
+            get
+            {
+                return this.weight;
             }
-        }
-        /*public Cinema Cinema
-        {
-            get { return cinema; }
+
             set
             {
-                cinema = value;
-                this.OnPropertyChanged("Cinema");
+                this.weight = value;
+                this.OnPropertyChanged("Weight");
             }
-        }*/
+        }
         #endregion
 
         #region Constructors

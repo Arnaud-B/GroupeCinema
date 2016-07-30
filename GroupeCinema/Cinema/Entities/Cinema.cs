@@ -15,12 +15,13 @@ namespace GroupeCinema.Cinema
         private String name;
         private Decimal finance;
         private Decimal credit;
-        private Address address;
-        /*private List<Eatable> eatables;
-        private List<Drinkable> drinkables;*/
-        private List<Employee> employees;
-        private List<Client> clients;
-        private List<Room> rooms;
+        //private Address address;
+        private Int32 address_id;
+        //private List<Eatable> eatables;
+        //private List<Drinkable> drinkables;
+        //private List<Employee> employees;
+        //private List<Client> clients;
+        //private List<Room> rooms;
         //private List<Movie> movies;
         #endregion
 
@@ -77,13 +78,13 @@ namespace GroupeCinema.Cinema
         }
 
         //[Column("address_id")]
-        public Address Address
+        public Int32 Address_id
         {
-            get { return address; }
+            get { return address_id; }
             set
             {
-                address = value;
-                this.OnPropertyChanged("Address");
+                address_id = value;
+                this.OnPropertyChanged("Address_id");
             }
         }
 
@@ -106,7 +107,7 @@ namespace GroupeCinema.Cinema
             }
         }*/
 
-        public List<Employee> Employees
+        /*public List<Employee> Employees
         {
             get { return employees; }
             set
@@ -135,7 +136,7 @@ namespace GroupeCinema.Cinema
                 rooms = value;
                 this.OnPropertyChanged("Rooms");
             }
-        }
+        }*/
         /*public List<Movie> Movies
         {
             get { return movies; }
@@ -152,8 +153,8 @@ namespace GroupeCinema.Cinema
         {
             //this.eatables = new List<Eatable>();
             //this.drinkables = new List<Drinkable>();
-            this.employees = new List<Employee>();
-            this.rooms = new List<Room>();
+            //this.employees = new List<Employee>();
+            //this.rooms = new List<Room>();
         }
         #endregion
 

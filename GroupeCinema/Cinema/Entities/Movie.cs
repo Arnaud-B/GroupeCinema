@@ -18,7 +18,6 @@ namespace GroupeCinema.Cinema
         private Int32 rentTime;
         private DateTime releaseDate;
         private MovieProvider movieProvider;
-        private List<Room> rooms;
         #endregion
 
         #region Properties
@@ -109,7 +108,7 @@ namespace GroupeCinema.Cinema
                 this.OnPropertyChanged("ReleaseDate");
             }
         }
-        public List<Room> Rooms
+        /*public List<Room> Rooms
         {
             get
             {
@@ -120,7 +119,7 @@ namespace GroupeCinema.Cinema
                 rooms = value;
                 this.OnPropertyChanged("Rooms");
             }
-        }
+        }*/
         #endregion
 
         #region Constructors

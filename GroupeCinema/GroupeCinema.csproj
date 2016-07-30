@@ -60,15 +60,18 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\WebServiceManager.cs" />
@@ -76,6 +79,11 @@
     <Compile Include="Cinema\Entities\Address.cs" />
     <Compile Include="Cinema\Entities\Base\EntityBase.cs" />
     <Compile Include="Cinema\Entities\Cinema.cs" />
+    <Compile Include="Cinema\Entities\Observable\IInvestor.cs" />
+    <Compile Include="Cinema\Entities\Observable\Investor.cs" />
+    <Compile Include="Cinema\Entities\Observable\Observable.cs" />
+    <Compile Include="Cinema\Entities\Observable\Test\NotifiedClass.cs" />
+    <Compile Include="Cinema\Entities\Observable\Test\ObservedClass.cs" />
     <Compile Include="Cinema\Entities\Room.cs" />
     <Compile Include="Cinema\Entities\UserCategory\Provider.cs" />
     <Compile Include="Cinema\Entities\UserCategory\Employee.cs" />
@@ -91,12 +99,17 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Database\FullDb.cs" />
     <Compile Include="Database\MySQLManager.cs" />
+    <Compile Include="Logger\AlertMode.cs" />
     <Compile Include="Enums\DataConnectionRessource.cs" />
     <Compile Include="Enums\Enums1.cs" />
     <Compile Include="Enums\EnumString.cs" />
     <Compile Include="Enums\StringValue.cs" />
+    <Compile Include="Event\ClassWithEnvent2.cs" />
+    <Compile Include="Event\ClassWithEvent.cs" />
     <Compile Include="faker\IFakerLoader.cs" />
     <Compile Include="Json\Sandbox.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Logger\LogMode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util.cs" />

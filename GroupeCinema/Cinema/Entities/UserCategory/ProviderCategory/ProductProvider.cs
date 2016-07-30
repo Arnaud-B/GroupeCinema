@@ -11,12 +11,12 @@ namespace GroupeCinema.Cinema
     public class ProductProvider : Provider
     {
         #region Attributes
-        private List<Eatable> eatables;
-        private List<Drinkable> drinkables;
+        //private List<Eatable> eatables;
+        //private List<Drinkable> drinkables;
         #endregion
 
         #region Properties
-        public List<Drinkable> Drinkables
+        /*public List<Drinkable> Drinkables
         {
             get { return drinkables; }
             set
@@ -33,7 +33,7 @@ namespace GroupeCinema.Cinema
                 eatables = value;
                 this.OnPropertyChanged("drinkables");
             }
-        }
+        }*/
         #endregion
 
         #region Constructor

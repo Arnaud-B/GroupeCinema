@@ -57,3 +57,7 @@ C:\Users\nono\Documents\Visual Studio 2015\Projects\GroupeCinema\WpfGroupeCinema
 C:\Users\nono\Documents\Visual Studio 2015\Projects\GroupeCinema\WpfGroupeCinema\obj\Debug\Views\Pages\EatableEnterView.g.cs
 C:\Users\nono\Documents\Visual Studio 2015\Projects\GroupeCinema\WpfGroupeCinema\obj\Debug\Views\Pages\DrinkableEnterView.baml
 C:\Users\nono\Documents\Visual Studio 2015\Projects\GroupeCinema\WpfGroupeCinema\obj\Debug\Views\Pages\EatableEnterView.baml
+C:\Users\nono\Documents\Visual Studio 2015\Projects\GroupeCinema\WpfGroupeCinema\bin\Debug\WpfGroupeCinema.exe.manifest
+C:\Users\nono\Documents\Visual Studio 2015\Projects\GroupeCinema\WpfGroupeCinema\bin\Debug\WpfGroupeCinema.application
+C:\Users\nono\Documents\Visual Studio 2015\Projects\GroupeCinema\WpfGroupeCinema\obj\Debug\WpfGroupeCinema.exe.manifest
+C:\Users\nono\Documents\Visual Studio 2015\Projects\GroupeCinema\WpfGroupeCinema\obj\Debug\WpfGroupeCinema.application

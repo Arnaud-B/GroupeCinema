@@ -11,11 +11,11 @@ namespace GroupeCinema.Cinema
     public class MovieProvider : Provider
     {
         #region Attributes
-        private List<Movie> movies;
+        //private List<Movie> movies;
         #endregion
 
         #region Properties
-        public List<Movie> Movies
+        /*public List<Movie> Movies
         {
             get { return movies; }
             set
@@ -23,7 +23,7 @@ namespace GroupeCinema.Cinema
                 movies = value;
                 this.OnPropertyChanged("Movies");
             }
-        }
+        }*/
         #endregion
 
         #region Constructors

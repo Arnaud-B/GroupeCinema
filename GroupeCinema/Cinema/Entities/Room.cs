@@ -14,6 +14,7 @@ namespace GroupeCinema.Cinema
         #region Attributes
         //private Cinema cinema;
         private Int32 capacity;
+        private Int32 cinema_id;
         #endregion
 
 
@@ -32,18 +33,15 @@ namespace GroupeCinema.Cinema
             }
         }
         //[Column("cinema")]
-        /*public Cinema Cinema
+        public Int32 Cinema_id
         {
-            get
-            {
-                return cinema;
-            }
+            get { return cinema_id; }
             set
             {
-                cinema = value;
-                this.OnPropertyChanged("Cinema");
+                cinema_id = value;
+                this.OnPropertyChanged("Cinema_id");
             }
-        }*/
+        }
         #endregion
 
         #region Constructors

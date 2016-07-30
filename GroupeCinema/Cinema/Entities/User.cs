@@ -16,7 +16,8 @@ namespace GroupeCinema.Cinema
         private String firstname;
         private String lastname;
         private DateTime birthDate;
-        private Address address;
+        private Int32 address_id;
+        private Int32 cinema_id;
         #endregion
 
         #region Properties
@@ -75,13 +76,22 @@ namespace GroupeCinema.Cinema
         /// <summary>
         /// Define the address of User.
         /// </summary>
-        public Address Address
+        public Int32 Address_id
         {
-            get { return address; }
+            get { return address_id; }
             set
             {
-                address = value;
-                this.OnPropertyChanged("Address");
+                address_id = value;
+                this.OnPropertyChanged("Address_id");
+            }
+        }
+        public Int32 Cinema_id
+        {
+            get { return cinema_id; }
+            set
+            {
+                cinema_id = value;
+                this.OnPropertyChanged("Cinema_id");
             }
         }
         #endregion
@@ -96,7 +106,7 @@ namespace GroupeCinema.Cinema
         #region Methods
         public override string ToString()
         {
-            return this.firstname + " " + this.lastname + " " + this.address;
+            return this.firstname + " " + this.lastname + " " + this.address_id;
         }
         #endregion
 

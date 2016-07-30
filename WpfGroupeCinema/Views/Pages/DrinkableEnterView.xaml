@@ -19,7 +19,6 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-       
         <Button x:Name="BtnHome" Content="Home" Grid.Row="3" Click="BtnNavigate2_Click"/>
     </Grid>
 </Page>
