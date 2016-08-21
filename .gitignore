@@ -1,2 +1,8 @@
 .vs
 packages/
+CinemaAPI/bin/
+CinemaAPI/obj/
+GroupeCinema/bin/
+GroupeCinema/obj/
+WpfGroupeCinema/bin/
+WpfGroupeCinema/obj/

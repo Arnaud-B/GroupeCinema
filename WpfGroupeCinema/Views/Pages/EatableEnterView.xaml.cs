@@ -59,6 +59,7 @@ namespace WpfGroupeCinema.Views
             this.eatableEnterViewModel = new EatableEnterViewModel(this);
             Console.WriteLine(EatableEnterViewModel.EatableEnterView.Name.Text);
             Console.WriteLine(EatableEnterViewModel.EatableEnterView.Price.Text);
+            Console.WriteLine(EatableEnterViewModel.EatableEnterView.Weight.Text);
 
             Cinema cinema = this.cinema;
 
@@ -66,16 +67,17 @@ namespace WpfGroupeCinema.Views
             Eatable eatable = new Eatable();
             eatable.Name = EatableEnterViewModel.EatableEnterView.Name.Text;
             eatable.Price = Decimal.Parse(EatableEnterViewModel.EatableEnterView.Price.Text);
-            eatable.Number = Decimal.Parse(EatableEnterViewModel.EatableEnterView.Weight.Text);
+            eatable.Weight = Decimal.Parse(EatableEnterViewModel.EatableEnterView.Weight.Text);
+            eatable.Number = 1;
             eatable.Cinema_id = cinema.Id;
-            await Task.Factory.StartNew(() =>
+            /*await Task.Factory.StartNew(() =>
             {
                 WebServiceManager<Eatable> manager1 = new WebServiceManager<Eatable>(DataConnectionResource.LOCALAPI);
                 manager1.Post(eatable);
-            });
+            });*/
             await Task.Factory.StartNew(() =>
             {
-                MySQLManager<Eatable> manager = new MySQLManager<Eatable>(DataConnectionResource.LOCALAPI);
+                MySQLManager<Eatable> manager = new MySQLManager<Eatable>(DataConnectionResource.LOCALMYQSL);
                 manager.Insert(eatable);
             });
 
@@ -92,14 +94,14 @@ namespace WpfGroupeCinema.Views
             eatables.Add(eatable);
             cinemaChoose.Eatables = eatables;*/
 
-            MySQLManager<Cinema> manager5 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
+            //MySQLManager<Cinema> manager5 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
             //await manager5.Get(cinema.Id);
             //manager5.DbSetT.Add(cinema);
             //cinema.Name = "pouet";
-            var result = await manager5.Get(cinema.Id);
+            //var result = await manager5.Get(cinema.Id);
          
-            result.Name = "pouet";
-            await manager5.Update(result);
+            //result.Name = "pouet";
+            //await manager5.Update(result);
 
         
 
