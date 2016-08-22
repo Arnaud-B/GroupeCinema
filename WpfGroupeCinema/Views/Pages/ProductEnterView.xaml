@@ -19,7 +19,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <Button x:Name="btnSelect" Grid.Row="1" Content="Select"/>
+        <Button x:Name="btnSelect" Grid.Row="1" Content="Select" Click="btnSelect_Click"/>
         <Button x:Name="btnAdd" Content="add" Grid.Row="2" Click="btnAdd_Click"/>
         <Button x:Name="BtnHome" Content="Home" Grid.Row="3" Click="BtnNavigate2_Click"/>
     </Grid>

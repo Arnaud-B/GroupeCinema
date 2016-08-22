@@ -40,12 +40,17 @@ namespace WpfGroupeCinema.CinemaListUserControl
             this.eatablesListView.ItemsSource = this.Eatables;
         }
 
-        public void LoadItems(List<Eatable> items)
+        public void LoadItems(List<Eatable> items, Cinema cinema)
         {
             this.Eatables.Clear();
             foreach (var item in items)
             {
-                Eatables.Add(item);
+              
+                if (item.Cinema_id == cinema.Id)
+                {
+                    Eatables.Add(item);
+
+                }
             }
         }
     }

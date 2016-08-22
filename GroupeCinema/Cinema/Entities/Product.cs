@@ -14,7 +14,7 @@ namespace GroupeCinema.Cinema
         #region Attributes
         private String name;
         private Decimal price;
-        private Decimal number;
+        private Int32 number;
         private DateTime buyDate;
         private Int32 cinema_id;
         #endregion
@@ -54,7 +54,7 @@ namespace GroupeCinema.Cinema
                 this.OnPropertyChanged("Price");
             }
         }
-        public Decimal Number
+        public Int32 Number
         {
             get
             {

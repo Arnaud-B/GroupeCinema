@@ -14,19 +14,18 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+           
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <TextBox Grid.Row="1" Name="Name" Text="name"/>
+        <!--<TextBox Grid.Row="1" Name="Name" Text="name"/>
         <TextBox Grid.Row="2" Name="Price" Text="12" />
-        <!--<TextBox Grid.Row="3" Name="Temperature" Text="temperature" />-->
-        <TextBox Grid.Row="3" Text="11" Name="Weight" />
- 
-        <Button x:Name="BtnAdd" Content="Add" Grid.Row="4" Click="BtnAdd_Click"/>
-        <Button x:Name="BtnHome" Content="Home" Grid.Row="5" Click="BtnNavigate2_Click"/>
+        <TextBox Grid.Row="3" Text="11" Name="Weight" />-->
+        <userControl:AddEatableUserControl x:Name="addEatableUserControl" Grid.Row="1" />
+
+        <Button x:Name="BtnAdd" Content="Add" Grid.Row="2" Click="BtnAdd_Click"/>
+        <Button x:Name="BtnHome" Content="Home" Grid.Row="3" Click="BtnNavigate2_Click"/>
     </Grid>
 </Page>

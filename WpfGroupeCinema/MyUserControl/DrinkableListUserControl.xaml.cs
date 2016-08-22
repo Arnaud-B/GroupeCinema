@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfGroupeCinema.CinemaListUserControl;
 
-namespace WpfGroupeCinema.MyUserControl
+namespace WpfGroupeCinema.CinemaListUserControl
 {
     /// <summary>
     /// Interaction logic for DrinkableListUserControl.xaml
@@ -37,17 +37,23 @@ namespace WpfGroupeCinema.MyUserControl
 
         public DrinkableListUserControl()
         {
-            //InitializeComponent();
+            InitializeComponent();
             this.Drinkables = new ObservableCollection<Drinkable>();
-            //this.drinkablesListView.ItemsSource = this.Drinkables;
+            this.drinkablesListView.ItemsSource = this.Drinkables;
         }
 
-        public void LoadItems(List<Drinkable> items)
+        public void LoadItems(List<Drinkable> items, Cinema cinema)
         {
             this.Drinkables.Clear();
             foreach (var item in items)
             {
-                Drinkables.Add(item);
+                Console.WriteLine("LoadItems drinkable");
+                Console.WriteLine(item.Cinema_id);
+                Console.WriteLine(cinema.Id);
+                if (item.Cinema_id == cinema.Id)
+                {
+                    Drinkables.Add(item);
+                }
             }
         }
     }

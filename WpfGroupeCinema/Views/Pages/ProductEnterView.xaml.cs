@@ -58,5 +58,10 @@ namespace WpfGroupeCinema.Views
                 this.NavigationService.Navigate(new AddProductEnterView(this.cinema));
             }
         }
+
+        private void btnSelect_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new ProductGestionEnterView(this.cinema));
+        }
     }
 }
