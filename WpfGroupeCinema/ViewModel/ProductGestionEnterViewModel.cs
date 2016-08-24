@@ -43,8 +43,7 @@ namespace WpfGroupeCinema.ViewModel
 
             });
 
-
-            Console.WriteLine(results.Count);
+            
             if (results != null)
             {
                 this.productGestionEnterView.eatableListUserControl.LoadItems(results, cinema);
@@ -62,7 +61,7 @@ namespace WpfGroupeCinema.ViewModel
             });
 
 
-            Console.WriteLine(results.Count);
+           
             if (results != null)
             {
                 this.productGestionEnterView.drinkableListUserControl.LoadItems(results, cinema);

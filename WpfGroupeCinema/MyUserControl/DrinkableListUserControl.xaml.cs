@@ -47,9 +47,6 @@ namespace WpfGroupeCinema.CinemaListUserControl
             this.Drinkables.Clear();
             foreach (var item in items)
             {
-                Console.WriteLine("LoadItems drinkable");
-                Console.WriteLine(item.Cinema_id);
-                Console.WriteLine(cinema.Id);
                 if (item.Cinema_id == cinema.Id)
                 {
                     Drinkables.Add(item);

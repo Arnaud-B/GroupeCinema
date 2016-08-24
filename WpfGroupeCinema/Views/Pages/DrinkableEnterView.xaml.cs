@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfGroupeCinema.CinemaListUserControl;
 using WpfGroupeCinema.ViewModel;
 
 namespace WpfGroupeCinema.Views
@@ -74,5 +75,7 @@ namespace WpfGroupeCinema.Views
                 manager.Insert(drinkable);
             });
         }
+
+
     }
 }

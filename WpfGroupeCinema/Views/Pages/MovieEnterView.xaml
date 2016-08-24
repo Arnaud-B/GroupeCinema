@@ -1,0 +1,28 @@
+﻿<Page x:Class="WpfGroupeCinema.Views.MovieEnterView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfGroupeCinema.Views"
+      xmlns:userControl="clr-namespace:WpfGroupeCinema.CinemaListUserControl"
+      mc:Ignorable="d" 
+      Title="MovieEnterView">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
+        <Button x:Name="btnAddMovie" Grid.Row="1" Content="Add Movie" Click="btnAddMovie_Click"/>
+        <Button x:Name="btnMovie" Content="Select Movie" Grid.Row="2" Click="btnMovie_Click"/>
+        <Button x:Name="BtnRoom" Content="Room" Grid.Row="3" Click="btnRoom_Click" />
+        <Button x:Name="BtnHome" Content="Home" Grid.Row="4" Click="BtnNavigate2_Click"/>
+    </Grid>
+</Page>

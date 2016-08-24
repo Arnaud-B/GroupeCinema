@@ -62,6 +62,7 @@ namespace WpfGroupeCinema.Views
             {
                 Console.WriteLine(cinema.Id);
                 Console.WriteLine(cinema.Finance);
+                this.NavigationService.Navigate(new MovieEnterView(this.cinema));
             }
         }
 
