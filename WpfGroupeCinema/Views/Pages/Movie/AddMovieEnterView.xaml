@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfGroupeCinema.Views.OwnerEnterView"
+﻿<Page x:Class="WpfGroupeCinema.Views.AddMovieEnterView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,11 +6,9 @@
       xmlns:local="clr-namespace:WpfGroupeCinema.Views"
       xmlns:userControl="clr-namespace:WpfGroupeCinema.CinemaListUserControl"
       mc:Ignorable="d" 
-      Title="OwnerEnterView">
-
+      Title="AddMovieEnterView">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -20,11 +18,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <userControl:OwnerUserControl x:Name="ownerUserControl" Grid.Row="0" />
-        <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="1" />
-        <userControl:CinemaListUserControl x:Name="cinemaListUserControl" Grid.Row="2" RenderTransformOrigin="0.496,0.932"  />
-        <Button x:Name="myBtn" Grid.Row="3" Content="ClickMe"/>
-        <Button x:Name="btnPopulate" Content="Populate" Grid.Row="4"/>
-        <Button x:Name="BtnNavigate2" Content="MENU" Grid.Row="5" Click="BtnNavigate2_Click"/>
+        <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
+        <userControl:AddMovieUserControl x:Name="addMovieUserControl" Grid.Row="1" />
+        <userControl:RoomListUserControl x:Name="roomListUserControl" Grid.Row="2" />
+        <!--<Button x:Name="BtnAdd" Content="Add" Grid.Row="3" Click="BtnAdd_Click"/>-->
+        <Button x:Name="btnAdd" Content="Add" Grid.Row="3"/>
+        <Button x:Name="BtnHome" Content="Home" Grid.Row="4" Click="BtnNavigate2_Click"/>
     </Grid>
 </Page>

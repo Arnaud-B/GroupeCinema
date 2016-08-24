@@ -29,7 +29,7 @@ namespace WpfGroupeCinema.ViewModel
         public AddProductEnterViewModel(Cinema cinema)
         {
             Console.WriteLine(cinema.Name);
-            setUpCinemaChoose(cinema);
+            //setUpCinemaChoose(cinema);
 
 
         }

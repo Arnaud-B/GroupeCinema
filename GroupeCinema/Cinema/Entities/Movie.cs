@@ -15,13 +15,11 @@ namespace GroupeCinema.Cinema
         private String name;
         private String author;
         private Int32 movieLength;
-        private Int32 rentTime;
         private DateTime releaseDate;
         private MovieProvider movieProvider;
         #endregion
 
         #region Properties
-        //[ForeignKey("movieProvider_id")]
         public MovieProvider MovieProvider
         {
             get
@@ -79,21 +77,6 @@ namespace GroupeCinema.Cinema
                 this.OnPropertyChanged("movieTime");
             }
         }
-
-        [Column("rentTime")]
-        public Int32 RentTime
-        {
-            get
-            {
-                return this.rentTime;
-            }
-
-            set
-            {
-                this.rentTime = value;
-                this.OnPropertyChanged("rentTime");
-            }
-        }
         [Column("releaseDate")]
         public DateTime ReleaseDate
         {
@@ -108,18 +91,6 @@ namespace GroupeCinema.Cinema
                 this.OnPropertyChanged("ReleaseDate");
             }
         }
-        /*public List<Room> Rooms
-        {
-            get
-            {
-                return rooms;
-            }
-            set
-            {
-                rooms = value;
-                this.OnPropertyChanged("Rooms");
-            }
-        }*/
         #endregion
 
         #region Constructors
@@ -130,10 +101,6 @@ namespace GroupeCinema.Cinema
         #endregion
 
         #region Methods
-        /*public override string ToString()
-        {
-            return this.id + " " + this.name + " " + this.author + " " + this.movieLength + " " + this.rentTime;
-        }*/
         #endregion
 
 

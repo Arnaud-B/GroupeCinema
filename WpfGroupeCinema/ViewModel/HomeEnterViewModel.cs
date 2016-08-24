@@ -35,7 +35,7 @@ namespace WpfGroupeCinema.ViewModel
 
             this.HomeEnterView.btnPopulate.Click += btnPopulate_Click;
 
-            //Logs();
+            Logs();
 
             SetupCinemaList();
         }
@@ -77,8 +77,10 @@ namespace WpfGroupeCinema.ViewModel
             if ((Cinema)e.AddedItems[0] != null)
             {
                 Console.WriteLine((Cinema)e.AddedItems[0]);
-                this.homeEnterView.cinemaUserControl.Cinema = (Cinema)e.AddedItems[0];
-                
+                Cinema cinema = new Cinema();
+                cinema = (Cinema)e.AddedItems[0];
+                Console.WriteLine(cinema.Id);
+                this.homeEnterView.cinemaUserControl.Cinema = (Cinema)e.AddedItems[0];                
             }
         }
         
@@ -120,6 +122,11 @@ namespace WpfGroupeCinema.ViewModel
                 address.Number = 2;
                 address.Path = "rue";
                 address.Street = "Paix";
+                await Task.Factory.StartNew(() =>
+                {
+                    MySQLManager<Address> manager4 = new MySQLManager<Address>(DataConnectionResource.LOCALMYQSL);
+                    manager4.Insert(address);
+                });
 
                 GroupeCinema.Cinema.MovieProvider productor = new MovieProvider();
                 productor.Id = 1;
@@ -169,11 +176,71 @@ namespace WpfGroupeCinema.ViewModel
                     manager4.Post(result);               
                 });
 
-                //cinema3.Name = "GaumontTamere";
-              
-                //MySQLManager<Cinema> manager5 = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
-                //await manager5.Update(cinema3);
-                
+                List<Room> rooms = new List<Room>();
+                Room room = new Room();
+                room.Capacity = 150;
+                room.Number = 1;
+                room.Cinema_id = cinema1.Id;
+                rooms.Add(room);
+
+                Room room1 = new Room();
+                room1.Capacity = 170;
+                room1.Number = 2;
+                room1.Cinema_id = cinema1.Id;
+                rooms.Add(room1);
+
+                Room room2 = new Room();
+                room2.Capacity = 100;
+                room2.Number = 3;
+                room2.Cinema_id = cinema1.Id;
+                rooms.Add(room2);
+
+                Room room3 = new Room();
+                room3.Capacity = 100;
+                room3.Number = 1;
+                room3.Cinema_id = cinema2.Id;
+                rooms.Add(room3);
+
+                Room room4 = new Room();
+                room4.Capacity = 120;
+                room4.Number = 2;
+                room4.Cinema_id = cinema2.Id;
+                rooms.Add(room4);
+
+                Room room5 = new Room();
+                room5.Capacity = 100;
+                room5.Number = 1;
+                room5.Cinema_id = cinema3.Id;
+                rooms.Add(room5);
+
+                Room room6 = new Room();
+                room6.Capacity = 200;
+                room6.Number = 2;
+                room6.Cinema_id = cinema3.Id;
+                rooms.Add(room6);
+
+                Room room7 = new Room();
+                room7.Capacity = 120;
+                room7.Number = 1;
+                room7.Cinema_id = cinema.Id;
+                rooms.Add(room7);
+
+                Room room8 = new Room();
+                room8.Capacity = 100;
+                room8.Number = 2;
+                room8.Cinema_id = cinema.Id;
+                rooms.Add(room8);
+
+                Room room9 = new Room();
+                room9.Capacity = 200;
+                room9.Number = 3;
+                room9.Cinema_id = cinema.Id;
+                rooms.Add(room9);
+                await Task.Factory.StartNew(() =>
+                {
+                    MySQLManager<Room> manager5 = new MySQLManager<Room>(DataConnectionResource.LOCALMYQSL);
+                    manager5.Insert(rooms);   
+                });
                 #endregion
             }
         }

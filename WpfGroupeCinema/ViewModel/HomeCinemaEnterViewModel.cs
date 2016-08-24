@@ -24,17 +24,11 @@ namespace WpfGroupeCinema.ViewModel
         public HomeCinemaEnterViewModel(HomeCinemaEnterView homeCinemaEnterView)
         {
             this.homeCinemaEnterView = homeCinemaEnterView;
-            this.HomeCinemaEnterView.cinemaUserControl.Cinema = setUpCinema();
-            //this.HomeCinemaEnterView.cinemaUserControl = homeCinemaEnterView;
-            //this.HomeCinemaEnterView.myBtn.Click += MyBtn_Click;
         }
 
         public HomeCinemaEnterViewModel(Cinema cinema)
         {
-            Console.WriteLine(cinema.Name);
             setUpCinemaChoose(cinema);
-
-           
         }
 
         private async void setUpCinemaChoose(Cinema cinema)
@@ -46,21 +40,10 @@ namespace WpfGroupeCinema.ViewModel
                 results = manager.Get(cinema.Id).Result as Cinema;
             });
 
-            if(results != null)
+            if (results != null)
             {
-                Console.WriteLine("Id cinema");
                 this.homeCinemaEnterView = homeCinemaEnterView;
-                this.HomeCinemaEnterView.cinemaUserControl.Cinema = setUpCinema();
             }
-        }
-
-        private Cinema setUpCinema()
-        {
-            GroupeCinema.Cinema.Cinema cinema = new GroupeCinema.Cinema.Cinema();
-            cinema.Id = 1;
-            cinema.Name = "Gaumont Paris";
-            cinema.Finance = 300000;
-            return cinema;
         }
     }
 }

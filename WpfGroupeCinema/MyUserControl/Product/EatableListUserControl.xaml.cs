@@ -49,7 +49,6 @@ namespace WpfGroupeCinema.CinemaListUserControl
                 if (item.Cinema_id == cinema.Id)
                 {
                     Eatables.Add(item);
-
                 }
             }
         }

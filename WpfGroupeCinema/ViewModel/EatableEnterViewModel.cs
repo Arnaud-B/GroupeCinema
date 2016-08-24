@@ -24,15 +24,8 @@ namespace WpfGroupeCinema.ViewModel
         public EatableEnterViewModel(EatableEnterView eatableEnterView)
         {
             this.eatableEnterView = eatableEnterView;
-           // this.EatableEnterView.BtnAdd.Click += BtnAdd_Click;
-                
-                
         }
 
-        public EatableEnterViewModel(Cinema cinema)
-        {
-           //this.eatableEnterView = eatableEnterView;
-        }
 
        
     }

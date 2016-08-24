@@ -110,8 +110,5 @@ namespace GroupeCinema.Cinema
         }
         #endregion
 
-
-     
-
     }
 }

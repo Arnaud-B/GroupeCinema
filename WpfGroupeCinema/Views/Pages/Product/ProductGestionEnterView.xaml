@@ -21,7 +21,6 @@
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
         <userControl:DrinkableListUserControl x:Name="drinkableListUserControl" Grid.Row="1" />
         <userControl:EatableListUserControl x:Name="eatableListUserControl" Grid.Row="2" />
-        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="3" />
-        <!--<Button x:Name="BtnHome" Content="Home" Grid.Row="3" Click="BtnNavigate2_Click"/>-->
+        <Button x:Name="BtnHome" Content="Home" Grid.Row="3" Click="BtnNavigate2_Click"/>
     </Grid>
 </Page>

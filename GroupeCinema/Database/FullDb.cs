@@ -43,8 +43,9 @@ namespace GroupeCinema.Database
         //public DbSet<Product> DbSetProduct { get; set; }
         public DbSet<Drinkable> DbSetDrinkable { get; set; }
         public DbSet<Eatable> DbSetEatable { get; set; }
-
         public DbSet<Movie> DbSetMovie { get; set; }
+        public DbSet<Room> DbSetRoom { get; set; }
+        public DbSet<MovieRoom> DbSetMovieRoom { get; set; }
 
         // User
         //public DbSet<User> DbSetUser { get; set; }

@@ -15,14 +15,7 @@ namespace GroupeCinema.Cinema
         private String name;
         private Decimal finance;
         private Decimal credit;
-        //private Address address;
         private Int32 address_id;
-        //private List<Eatable> eatables;
-        //private List<Drinkable> drinkables;
-        //private List<Employee> employees;
-        //private List<Client> clients;
-        //private List<Room> rooms;
-        //private List<Movie> movies;
         #endregion
 
         #region Properties
@@ -77,7 +70,7 @@ namespace GroupeCinema.Cinema
             }
         }
 
-        //[Column("address_id")]
+        [Column("address_id")]
         public Int32 Address_id
         {
             get { return address_id; }
@@ -87,74 +80,11 @@ namespace GroupeCinema.Cinema
                 this.OnPropertyChanged("Address_id");
             }
         }
-
-        /*public List<Eatable> Eatables
-        {
-            get { return eatables; }
-            set
-            {
-                eatables = value;
-                this.OnPropertyChanged("Eatables");
-            }
-        }
-        public List<Drinkable> Drinkables
-        {
-            get { return drinkables; }
-            set
-            {
-                drinkables = value;
-                this.OnPropertyChanged("Drinkables");
-            }
-        }*/
-
-        /*public List<Employee> Employees
-        {
-            get { return employees; }
-            set
-            {
-                employees = value;
-                this.OnPropertyChanged("Employees");
-            }
-        }
-        public List<Client> Clients
-        {
-            get { return clients; }
-            set
-            {
-                clients = value;
-                this.OnPropertyChanged("Clients");
-            }
-        }
-        public List<Room> Rooms
-        {
-            get
-            {
-                return rooms;
-            }
-            set
-            {
-                rooms = value;
-                this.OnPropertyChanged("Rooms");
-            }
-        }*/
-        /*public List<Movie> Movies
-        {
-            get { return movies; }
-            set
-            {
-                movies = value;
-                this.OnPropertyChanged("Movies");
-            }
-        }*/
         #endregion
 
         #region Constructors
         public Cinema()
         {
-            //this.eatables = new List<Eatable>();
-            //this.drinkables = new List<Drinkable>();
-            //this.employees = new List<Employee>();
-            //this.rooms = new List<Room>();
         }
         #endregion
 

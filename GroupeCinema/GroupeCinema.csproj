@@ -79,6 +79,7 @@
     <Compile Include="Cinema\Entities\Address.cs" />
     <Compile Include="Cinema\Entities\Base\EntityBase.cs" />
     <Compile Include="Cinema\Entities\Cinema.cs" />
+    <Compile Include="Cinema\Entities\MovieRoom.cs" />
     <Compile Include="Cinema\Entities\Observable\IInvestor.cs" />
     <Compile Include="Cinema\Entities\Observable\Investor.cs" />
     <Compile Include="Cinema\Entities\Observable\Observable.cs" />

@@ -26,7 +26,7 @@ namespace WpfGroupeCinema.Views.Pages
         }
         private void BtnNavigate1_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new OwnerEnterView());
+            //this.NavigationService.Navigate(new OwnerEnterView());
         }
         private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
         {

@@ -12,8 +12,8 @@ namespace GroupeCinema.Cinema
     public class Room : EntityBase
     {
         #region Attributes
-        //private Cinema cinema;
         private Int32 capacity;
+        private Int32 number;
         private Int32 cinema_id;
         #endregion
 
@@ -32,7 +32,20 @@ namespace GroupeCinema.Cinema
                 this.OnPropertyChanged("Capacity");
             }
         }
-        //[Column("cinema")]
+        [Column("number")]
+        public Int32 Number
+        {
+            get
+            {
+                return number;
+            }
+            set
+            {
+                number = value;
+                this.OnPropertyChanged("Number");
+            }
+        }
+        [Column("cinema_id")]
         public Int32 Cinema_id
         {
             get { return cinema_id; }

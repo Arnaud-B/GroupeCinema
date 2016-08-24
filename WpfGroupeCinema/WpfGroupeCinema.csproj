@@ -91,40 +91,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MyUserControl\AddDrinkableUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Product\AddDrinkableUserControl.xaml.cs">
       <DependentUpon>AddDrinkableUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\AddEatableUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Product\AddEatableUserControl.xaml.cs">
       <DependentUpon>AddEatableUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\Movie\AddMovieUserControl.xaml.cs">
+      <DependentUpon>AddMovieUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\Base\BaseUserControl.cs" />
-    <Compile Include="MyUserControl\CinemaListUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Cinema\CinemaListUserControl.xaml.cs">
       <DependentUpon>CinemaListUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\CinemaUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Cinema\CinemaUserControl.xaml.cs">
       <DependentUpon>CinemaUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\DrinkableListUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Product\DrinkableListUserControl.xaml.cs">
       <DependentUpon>DrinkableListUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\DrinkableUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Product\DrinkableUserControl.xaml.cs">
       <DependentUpon>DrinkableUserControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MyUserControl\HomeUserControl.xaml.cs">
-      <DependentUpon>HomeUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\OwnerUserControl.xaml.cs">
       <DependentUpon>OwnerUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\EatableListUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Product\EatableListUserControl.xaml.cs">
       <DependentUpon>EatableListUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\EatableUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Product\EatableUserControl.xaml.cs">
       <DependentUpon>EatableUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MyUserControl\ProductListUserControl.xaml.cs">
+    <Compile Include="MyUserControl\Product\ProductListUserControl.xaml.cs">
       <DependentUpon>ProductListUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\Movie\RoomListUserControl.xaml.cs">
+      <DependentUpon>RoomListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AddMovieEnterViewModel.cs" />
     <Compile Include="ViewModel\AddProductEnterViewModel.cs" />
     <Compile Include="ViewModel\CinemaEnterViewModel.cs" />
     <Compile Include="ViewModel\DrinkableEnterViewModel.cs" />
@@ -134,16 +138,19 @@
     <Compile Include="ViewModel\MovieEnterViewModel.cs" />
     <Compile Include="ViewModel\ProductEnterViewModel.cs" />
     <Compile Include="ViewModel\ProductGestionEnterViewModel.cs" />
-    <Compile Include="Views\Pages\AddProductEnterView.xaml.cs">
+    <Compile Include="Views\Pages\Movie\AddMovieEnterView.xaml.cs">
+      <DependentUpon>AddMovieEnterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Product\AddProductEnterView.xaml.cs">
       <DependentUpon>AddProductEnterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\CinemaEnterView.xaml.cs">
       <DependentUpon>CinemaEnterView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\DrinkableEnterView.xaml.cs">
+    <Compile Include="Views\Pages\Product\DrinkableEnterView.xaml.cs">
       <DependentUpon>DrinkableEnterView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\EatableEnterView.xaml.cs">
+    <Compile Include="Views\Pages\Product\EatableEnterView.xaml.cs">
       <DependentUpon>EatableEnterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\HomeCinemaEnterView.xaml.cs">
@@ -152,23 +159,19 @@
     <Compile Include="Views\Pages\HomeEnterView.xaml.cs">
       <DependentUpon>HomeEnterView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\MovieEnterView.xaml.cs">
+    <Compile Include="Views\Pages\Movie\MovieEnterView.xaml.cs">
       <DependentUpon>MovieEnterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\Page2.xaml.cs">
       <DependentUpon>Page2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\OwnerEnterView.xaml.cs">
-      <DependentUpon>OwnerEnterView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModel\OwnerEnterViewModel.cs" />
     <Compile Include="Views\NavigationWindow1.xaml.cs">
       <DependentUpon>NavigationWindow1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\ProductGestionEnterView.xaml.cs">
+    <Compile Include="Views\Pages\Product\ProductGestionEnterView.xaml.cs">
       <DependentUpon>ProductGestionEnterView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Pages\ProductEnterView.xaml.cs">
+    <Compile Include="Views\Pages\Product\ProductEnterView.xaml.cs">
       <DependentUpon>ProductEnterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Window1.xaml.cs">
@@ -186,31 +189,31 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MyUserControl\AddDrinkableUserControl.xaml">
+    <Page Include="MyUserControl\Product\AddDrinkableUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\AddEatableUserControl.xaml">
+    <Page Include="MyUserControl\Product\AddEatableUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\CinemaListUserControl.xaml">
+    <Page Include="MyUserControl\Movie\AddMovieUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\CinemaUserControl.xaml">
+    <Page Include="MyUserControl\Cinema\CinemaListUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\DrinkableListUserControl.xaml">
+    <Page Include="MyUserControl\Cinema\CinemaUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\DrinkableUserControl.xaml">
+    <Page Include="MyUserControl\Product\DrinkableListUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\HomeUserControl.xaml">
+    <Page Include="MyUserControl\Product\DrinkableUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,19 +221,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\EatableListUserControl.xaml">
+    <Page Include="MyUserControl\Product\EatableListUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\EatableUserControl.xaml">
+    <Page Include="MyUserControl\Product\EatableUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MyUserControl\ProductListUserControl.xaml">
+    <Page Include="MyUserControl\Product\ProductListUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\AddProductEnterView.xaml">
+    <Page Include="MyUserControl\Movie\RoomListUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\Movie\AddMovieEnterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\Product\AddProductEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -238,11 +249,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\DrinkableEnterView.xaml">
+    <Page Include="Views\Pages\Product\DrinkableEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\EatableEnterView.xaml">
+    <Page Include="Views\Pages\Product\EatableEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -254,7 +265,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\MovieEnterView.xaml">
+    <Page Include="Views\Pages\Movie\MovieEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -262,19 +273,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\OwnerEnterView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\NavigationWindow1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\ProductGestionEnterView.xaml">
+    <Page Include="Views\Pages\Product\ProductGestionEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Pages\ProductEnterView.xaml">
+    <Page Include="Views\Pages\Product\ProductEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
