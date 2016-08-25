@@ -50,7 +50,7 @@ namespace WpfGroupeCinema.Views
 
         private void btnMovie_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new MovieRoomEnterView(this.cinema));
         }
 
         private void btnRoom_Click(object sender, RoutedEventArgs e)

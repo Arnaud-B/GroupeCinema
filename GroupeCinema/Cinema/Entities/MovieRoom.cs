@@ -13,6 +13,7 @@ namespace GroupeCinema.Cinema
         #region Attributes
         private Int32 movie_id;
         private Int32 room_id;
+        private Int32 cinema_id;
         private Int32 rentTime;
         private DateTime startDate;
         #endregion
@@ -36,6 +37,17 @@ namespace GroupeCinema.Cinema
             {
                 room_id = value;
                 this.OnPropertyChanged("Room_id");
+
+            }
+        }
+        [Column("cinema_id")]
+        public Int32 Cinema_id
+        {
+            get { return cinema_id; }
+            set
+            {
+                cinema_id = value;
+                this.OnPropertyChanged("Cinema_id");
 
             }
         }

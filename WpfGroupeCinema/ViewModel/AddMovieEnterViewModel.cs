@@ -29,6 +29,7 @@ namespace WpfGroupeCinema.ViewModel
 
         public AddMovieEnterViewModel(AddMovieEnterView addMovieEnterView, Cinema cinema)
         {
+            this.cinema = cinema;
             this.addMovieEnterView = addMovieEnterView;
 
             this.AddMovieEnterView.roomListUserControl.roomsListView.SelectionChanged += RoomListView_SelectionChanged;
@@ -55,7 +56,7 @@ namespace WpfGroupeCinema.ViewModel
             Movie movie = new Movie();
             movie.Name = this.AddMovieEnterView.addMovieUserControl.Name;
             movie.Author = this.AddMovieEnterView.addMovieUserControl.Author;
-            movie.MovieLength = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.Length);
+            movie.Length = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.Length);
             movie.ReleaseDate = DateTime.Now;
 
             await Task.Factory.StartNew(() =>
@@ -70,6 +71,7 @@ namespace WpfGroupeCinema.ViewModel
                 movieRoom.RentTime = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.RentTime);
                 movieRoom.Movie_id = movie.Id;
                 movieRoom.Room_id = this.room.Id;
+                movieRoom.Cinema_id = this.cinema.Id;
                 movieRoom.StartDate = DateTime.Now;
                 await Task.Factory.StartNew(() =>
                 {

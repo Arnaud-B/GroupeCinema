@@ -14,7 +14,7 @@ namespace GroupeCinema.Cinema
         #region Attributes
         private String name;
         private String author;
-        private Int32 movieLength;
+        private Int32 length;
         private DateTime releaseDate;
         private MovieProvider movieProvider;
         #endregion
@@ -63,18 +63,18 @@ namespace GroupeCinema.Cinema
             }
         }
 
-        [Column("movieLength")]
-        public Int32 MovieLength
+        [Column("length")]
+        public Int32 Length
         {
             get
             {
-                return this.movieLength;
+                return this.length;
             }
 
             set
             {
-                this.movieLength = value;
-                this.OnPropertyChanged("movieTime");
+                this.length = value;
+                this.OnPropertyChanged("Length");
             }
         }
         [Column("releaseDate")]
