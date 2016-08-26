@@ -13,7 +13,6 @@ namespace WpfGroupeCinema.ViewModel
     public class AddProductEnterViewModel
     {
         private AddProductEnterView addProductEnterView;
-        private Cinema cinema;
 
         public AddProductEnterView AddProductEnterView
         {

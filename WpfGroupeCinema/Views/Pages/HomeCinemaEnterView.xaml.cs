@@ -68,14 +68,17 @@ namespace WpfGroupeCinema.Views
         {
             if (this.cinema != null)
             {
-                Console.WriteLine(cinema.Id);
-                Console.WriteLine(cinema.Finance);
+                this.NavigationService.Navigate(new ManagementEnterView(this.cinema));
             }
         }
 
         private void BtnNavigate_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new HomeEnterView());
+            MessageBoxResult result = MessageBox.Show("Do you want go to home ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                this.NavigationService.Navigate(new HomeEnterView());
+            }
         }
     }
 }

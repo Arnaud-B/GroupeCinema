@@ -96,7 +96,7 @@ namespace WpfGroupeCinema.ViewModel
             {
                 Application.Current.Shutdown();
             }*/
-            MessageBoxResult result = MessageBox.Show("Bienvenue sur le groupement de cinema", "GroupeCinema");
+            //MessageBoxResult result = MessageBox.Show("Bienvenue sur le groupement de cinema", "GroupeCinema");
         }
 
         /*private async void btnPopulate_Click(object sender, System.Windows.RoutedEventArgs e)

@@ -91,8 +91,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MyUserControl\Cinema\CinemaManagementUserControl.xaml.cs">
+      <DependentUpon>CinemaManagementUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\Movie\MovieListUserControl.xaml.cs">
       <DependentUpon>MovieListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\Movie\MovieManagementUserControl.xaml.cs">
+      <DependentUpon>MovieManagementUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\Product\AddDrinkableUserControl.xaml.cs">
       <DependentUpon>AddDrinkableUserControl.xaml</DependentUpon>
@@ -131,6 +137,9 @@
     <Compile Include="MyUserControl\Movie\RoomListUserControl.xaml.cs">
       <DependentUpon>RoomListUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\Product\ProductManagementUserControl.xaml.cs">
+      <DependentUpon>ProductManagementUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\AddMovieEnterViewModel.cs" />
     <Compile Include="ViewModel\AddProductEnterViewModel.cs" />
     <Compile Include="ViewModel\CinemaEnterViewModel.cs" />
@@ -138,10 +147,14 @@
     <Compile Include="ViewModel\EatableEnterViewModel.cs" />
     <Compile Include="ViewModel\HomeCinemaEnterViewModel.cs" />
     <Compile Include="ViewModel\HomeEnterViewModel.cs" />
+    <Compile Include="ViewModel\ManagementEnterViewModel.cs" />
     <Compile Include="ViewModel\MovieEnterViewModel.cs" />
     <Compile Include="ViewModel\MovieRoomEnterViewModel.cs" />
     <Compile Include="ViewModel\ProductEnterViewModel.cs" />
     <Compile Include="ViewModel\ProductGestionEnterViewModel.cs" />
+    <Compile Include="Views\Pages\ManagementEnterView.xaml.cs">
+      <DependentUpon>ManagementEnterView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Pages\Movie\AddMovieEnterView.xaml.cs">
       <DependentUpon>AddMovieEnterView.xaml</DependentUpon>
     </Compile>
@@ -196,7 +209,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MyUserControl\Cinema\CinemaManagementUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MyUserControl\Movie\MovieListUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\Movie\MovieManagementUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -245,6 +266,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\Movie\RoomListUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\Product\ProductManagementUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\ManagementEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
