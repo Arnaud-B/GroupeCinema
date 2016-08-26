@@ -1,6 +1,4 @@
 ﻿using GroupeCinema.Cinema;
-using GroupeCinema.Database;
-using GroupeCinema.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +24,6 @@ namespace WpfGroupeCinema.Views
     public partial class DrinkableEnterView : Page
     {
         private DrinkableEnterViewModel drinkableEnterViewModel;
-        private Cinema cinema;
 
         public DrinkableEnterViewModel DrinkableEnterViewModel
         {
@@ -43,39 +40,14 @@ namespace WpfGroupeCinema.Views
         public DrinkableEnterView(Cinema cinema)
         {
             InitializeComponent();
-            this.drinkableEnterViewModel = new DrinkableEnterViewModel(this);
-            this.cinema = cinema;
-            DrinkableEnterViewModel.DrinkableEnterView.cinemaUserControl.Cinema = cinema;
+            this.drinkableEnterViewModel = new DrinkableEnterViewModel(this, cinema);
+            drinkableEnterViewModel.DrinkableEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
         }
 
-        private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
+        private void BtnNavigate_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HomeEnterView());
         }
-
-        private async void BtnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            InitializeComponent();
-            this.drinkableEnterViewModel = new DrinkableEnterViewModel(this);
-
-
-            Cinema cinema = this.cinema;
-
-            Drinkable drinkable = new Drinkable();
-            drinkable.Name = DrinkableEnterViewModel.DrinkableEnterView.addDrinkableUserControl.Name;
-            drinkable.Price = Decimal.Parse(DrinkableEnterViewModel.DrinkableEnterView.addDrinkableUserControl.Price);
-            drinkable.Liter = Decimal.Parse(DrinkableEnterViewModel.DrinkableEnterView.addDrinkableUserControl.Liter);
-            drinkable.Number = Int32.Parse(DrinkableEnterViewModel.DrinkableEnterView.addDrinkableUserControl.Number);
-            drinkable.BuyDate = DateTime.Now;
-            drinkable.Cinema_id = cinema.Id;
-
-            await Task.Factory.StartNew(() =>
-            {
-                MySQLManager<Drinkable> manager = new MySQLManager<Drinkable>(DataConnectionResource.LOCALMYQSL);
-                manager.Insert(drinkable);
-            });
-        }
-
 
     }
 }

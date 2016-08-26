@@ -24,6 +24,6 @@
         <userControl:DrinkableListUserControl x:Name="drinkableListUserControl" Grid.Row="2" />
         <Label Content="Eatable" FontSize="15" Grid.Row="3"/>
         <userControl:EatableListUserControl x:Name="eatableListUserControl" Grid.Row="4" />
-        <Button x:Name="BtnHome" Content="Home" Grid.Row="5" Click="BtnNavigate2_Click" Margin="10" FontSize="20"/>
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="5"/>
     </Grid>
 </Page>

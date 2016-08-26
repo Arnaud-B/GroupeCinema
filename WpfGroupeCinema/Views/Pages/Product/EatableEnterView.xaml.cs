@@ -43,44 +43,15 @@ namespace WpfGroupeCinema.Views
         public EatableEnterView(Cinema cinema)
         {
             InitializeComponent();
-            this.eatableEnterViewModel = new EatableEnterViewModel(this);
-            this.cinema = cinema;
-            EatableEnterViewModel.EatableEnterView.cinemaUserControl.Cinema = cinema;
+            this.eatableEnterViewModel = new EatableEnterViewModel(this, cinema);
+            EatableEnterViewModel.EatableEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
         }
 
-        private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
+        private void BtnNavigate_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HomeEnterView());
         }
 
-        private async void BtnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            InitializeComponent();
-            this.eatableEnterViewModel = new EatableEnterViewModel(this);
-           
-            Cinema cinema = this.cinema;
-
-            Eatable eatable = new Eatable();
-            eatable.Name = EatableEnterViewModel.EatableEnterView.addEatableUserControl.Name;
-            eatable.Price = Decimal.Parse(EatableEnterViewModel.EatableEnterView.addEatableUserControl.Price);
-            eatable.Weight = Decimal.Parse(EatableEnterViewModel.EatableEnterView.addEatableUserControl.Weight);
-            eatable.Number = Int32.Parse(EatableEnterViewModel.EatableEnterView.addEatableUserControl.Number);
-            eatable.BuyDate = DateTime.Now;
-            eatable.Cinema_id = cinema.Id; 
-          
-             /*await Task.Factory.StartNew(() =>
-             {
-                 WebServiceManager<Eatable> manager1 = new WebServiceManager<Eatable>(DataConnectionResource.LOCALAPI);
-                 manager1.Post(eatable);
-             });*/
-
-            await Task.Factory.StartNew(() =>
-            {
-                 MySQLManager<Eatable> manager = new MySQLManager<Eatable>(DataConnectionResource.LOCALMYQSL);
-                 manager.Insert(eatable);
-             });
-
-
-        }
+   
     }
 }

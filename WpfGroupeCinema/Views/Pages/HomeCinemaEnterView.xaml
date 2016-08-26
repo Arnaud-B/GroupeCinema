@@ -22,6 +22,6 @@
         <Button x:Name="BtnManagement" Content="Management" Grid.Row="1" Click="BtnManagement_Click" Margin="10" FontSize="20"/>
         <Button x:Name="BtnProducts" Content="Products" Grid.Row="2" Click="BtnProducts_Click" Margin="10" FontSize="20"/>
         <Button x:Name="BtnFilms" Content="Movie" Grid.Row="3" Click="BtnMovies_Click" Margin="10" FontSize="20"/>
-        <Button x:Name="Btn_Home" Content="Home" Grid.Row="4" Click="BtnNavigate_Click" Margin="10" FontSize="20"/>
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="4"/>
     </Grid>
 </Page>

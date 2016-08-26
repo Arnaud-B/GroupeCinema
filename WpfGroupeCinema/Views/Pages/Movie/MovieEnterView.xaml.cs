@@ -41,6 +41,7 @@ namespace WpfGroupeCinema.Views
             this.movieEnterViewModel = new MovieEnterViewModel(this);
             this.cinema = cinema;
             MovieEnterViewModel.MovieEnterView.cinemaUserControl.Cinema = cinema;
+            MovieEnterViewModel.MovieEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
         }
 
         private void btnAddMovie_Click(object sender, RoutedEventArgs e)
@@ -58,7 +59,7 @@ namespace WpfGroupeCinema.Views
 
         }
 
-        private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
+        private void BtnNavigate_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HomeEnterView());
         }
