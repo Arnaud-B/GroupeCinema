@@ -9,15 +9,11 @@
         mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="cinemaIdTxtB" Text="{Binding Cinema.Id}" Grid.Row="0" Grid.Column="0"/>
-        <TextBlock x:Name="cinemaNameTxtB" Text="{Binding Cinema.Name}" Grid.Row="0" Grid.Column="1"/>
-        <TextBlock x:Name="cinemaFinanceTxtB" Text="{Binding Cinema.Finance}" Grid.Row="0" Grid.Column="2"/>
+        <TextBlock x:Name="cinemaNameTxtB" Text="{Binding Cinema.Name}" Grid.Row="0" Grid.Column="1" FontSize="18" Margin="10"/>
     </Grid>
 </baseUserControl:BaseUserControl>

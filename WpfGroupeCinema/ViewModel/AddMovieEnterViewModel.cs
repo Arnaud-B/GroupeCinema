@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using WpfGroupeCinema.Views;
@@ -53,31 +54,36 @@ namespace WpfGroupeCinema.ViewModel
         {
             Cinema cinema = this.cinema;
 
-            Movie movie = new Movie();
-            movie.Name = this.AddMovieEnterView.addMovieUserControl.Name;
-            movie.Author = this.AddMovieEnterView.addMovieUserControl.Author;
-            movie.Length = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.Length);
-            movie.ReleaseDate = DateTime.Now;
-
-            await Task.Factory.StartNew(() =>
+            if (Regex.IsMatch(this.AddMovieEnterView.addMovieUserControl.Length, @"^\d+$") && Regex.IsMatch(this.AddMovieEnterView.addMovieUserControl.RentTime, @"^\d+$"))
             {
-                MySQLManager<Movie> manager = new MySQLManager<Movie>(DataConnectionResource.LOCALMYQSL);
-                manager.Insert(movie);
-            });
 
-            if(this.room != null)
-            {
-                MovieRoom movieRoom = new MovieRoom();
-                movieRoom.RentTime = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.RentTime);
-                movieRoom.Movie_id = movie.Id;
-                movieRoom.Room_id = this.room.Id;
-                movieRoom.Cinema_id = this.cinema.Id;
-                movieRoom.StartDate = DateTime.Now;
+
+                Movie movie = new Movie();
+                movie.Name = this.AddMovieEnterView.addMovieUserControl.Name;
+                movie.Author = this.AddMovieEnterView.addMovieUserControl.Author;
+                movie.Length = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.Length);
+                movie.ReleaseDate = DateTime.Now;
+
                 await Task.Factory.StartNew(() =>
                 {
-                    MySQLManager<MovieRoom> manager1 = new MySQLManager<MovieRoom>(DataConnectionResource.LOCALMYQSL);
-                    manager1.Insert(movieRoom);
+                    MySQLManager<Movie> manager = new MySQLManager<Movie>(DataConnectionResource.LOCALMYQSL);
+                    manager.Insert(movie);
                 });
+
+                if (this.room != null)
+                {
+                    MovieRoom movieRoom = new MovieRoom();
+                    movieRoom.RentTime = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.RentTime);
+                    movieRoom.Movie_id = movie.Id;
+                    movieRoom.Room_id = this.room.Id;
+                    movieRoom.Cinema_id = this.cinema.Id;
+                    movieRoom.StartDate = DateTime.Now;
+                    await Task.Factory.StartNew(() =>
+                    {
+                        MySQLManager<MovieRoom> manager1 = new MySQLManager<MovieRoom>(DataConnectionResource.LOCALMYQSL);
+                        manager1.Insert(movieRoom);
+                    });
+                }
             }
         }
 

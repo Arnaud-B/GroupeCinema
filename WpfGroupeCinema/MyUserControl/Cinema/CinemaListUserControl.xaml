@@ -17,13 +17,11 @@
                          
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50"/>
-                            <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock x:Name="cinemaIdTxtB" Text="{Binding Id}" Grid.Row="0" Grid.Column="0"/>
-                        <TextBlock x:Name="cinemaNameTxtB" Text="{Binding Name}" Grid.Row="0" Grid.Column="1"/>
-                        <TextBlock x:Name="cinemaFinanceTxtB" Text="{Binding Finance}" Grid.Row="0" Grid.Column="2"/>
+                        <!--<TextBlock x:Name="cinemaIdTxtB" Text="{Binding Id}" Grid.Row="0" Grid.Column="0"/>-->
+                        <TextBlock x:Name="cinemaNameTxtB" Text="{Binding Name}" Grid.Row="0" Grid.Column="0" FontSize="15"/>
+                        <!--<TextBlock x:Name="cinemaFinanceTxtB" Text="{Binding Finance}" Grid.Row="0" Grid.Column="2"/>-->
                        
                     </Grid>
                 </DataTemplate>

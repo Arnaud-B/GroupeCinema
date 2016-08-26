@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using WpfGroupeCinema.Views;
 using WpfGroupeCinema.Views.Pages;
@@ -33,9 +34,11 @@ namespace WpfGroupeCinema.ViewModel
 
             this.HomeEnterView.cinemaListUserControl.cinemasListView.SelectionChanged += CinemasListView_SelectionChanged;
 
-            this.HomeEnterView.btnPopulate.Click += btnPopulate_Click;
+            //this.HomeEnterView.btnPopulate.Click += btnPopulate_Click;
 
             Logs();
+
+            //Populate(); 
 
             SetupCinemaList();
         }
@@ -76,7 +79,6 @@ namespace WpfGroupeCinema.ViewModel
         {
             if ((Cinema)e.AddedItems[0] != null)
             {
-                Console.WriteLine((Cinema)e.AddedItems[0]);
                 Cinema cinema = new Cinema();
                 cinema = (Cinema)e.AddedItems[0];
                 Console.WriteLine(cinema.Id);
@@ -87,11 +89,17 @@ namespace WpfGroupeCinema.ViewModel
         
         private void Logs()
         {
-            Logger logger = new Logger(LogMode.EXTERNAL, AlertMode.MESSAGE_BOX);
-            logger.Log("Test", "Bienvenue sur le groupement de cinema");
+            //Logger logger = new Logger(LogMode.EXTERNAL, AlertMode.MESSAGE_BOX);
+            //logger.Log("Bienvenue sur le groupement de cinema");
+            /*MessageBoxResult result = MessageBox.Show("Do you want to close this window?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }*/
+            MessageBoxResult result = MessageBox.Show("Bienvenue sur le groupement de cinema", "GroupeCinema");
         }
 
-        private async void btnPopulate_Click(object sender, System.Windows.RoutedEventArgs e)
+        /*private async void btnPopulate_Click(object sender, System.Windows.RoutedEventArgs e)
         {
 
             List<Cinema> results = new List<Cinema>();
@@ -105,17 +113,6 @@ namespace WpfGroupeCinema.ViewModel
             if (results.Count < 4)
             {
                 #region Populate Database
-                GroupeCinema.Cinema.Drinkable product = new Drinkable();
-                product.Id = 1;
-                product.Name = "Coca-Cola";
-                product.Liter = new Decimal(1);
-                product.Price = new Decimal(4);
-                await Task.Factory.StartNew(() =>
-                {
-                    MySQLManager<Drinkable> manager2 = new MySQLManager<Drinkable>(DataConnectionResource.LOCALMYQSL);
-                    manager2.Insert(product);
-                });
-
                 GroupeCinema.Cinema.Address address = new Address();
                 address.Id = 1;
                 address.City = "Paris";
@@ -174,6 +171,20 @@ namespace WpfGroupeCinema.ViewModel
                     //manager4.Insert(result);     
                     WebServiceManager<Cinema> manager4 = new WebServiceManager<Cinema>(DataConnectionResource.LOCALAPI);
                     manager4.Post(result);               
+                });
+
+                GroupeCinema.Cinema.Drinkable product = new Drinkable();
+                product.Id = 1;
+                product.Name = "Coca-Cola";
+                product.Liter = new Decimal(1);
+                product.Price = new Decimal(4);
+                product.Number = 100;
+                product.Cinema_id = cinema3.Id;
+                product.BuyDate = DateTime.Now;
+                await Task.Factory.StartNew(() =>
+                {
+                    MySQLManager<Drinkable> manager2 = new MySQLManager<Drinkable>(DataConnectionResource.LOCALMYQSL);
+                    manager2.Insert(product);
                 });
 
                 List<Room> rooms = new List<Room>();
@@ -243,6 +254,6 @@ namespace WpfGroupeCinema.ViewModel
                 });
                 #endregion
             }
-        }
+        }*/
     }
 }

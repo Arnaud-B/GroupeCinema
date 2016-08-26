@@ -16,13 +16,14 @@
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50" />
-                            <ColumnDefinition Width="50" />
-                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="60" />
+                            <ColumnDefinition Width="100" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock x:Name="roomIdTxtB" Text="{Binding Id}" Grid.Row="0" Grid.Column="0"/>
-                        <TextBlock x:Name="roomNumberTxtB" Text="{Binding Number}" Grid.Row="0" Grid.Column="1"/>
-                        <TextBlock x:Name="roomCapacityTxtB" Text="{Binding Capacity}" Grid.Row="0" Grid.Column="2"/>
-
+                        <Label Content="Room" Grid.Row="0" Grid.Column="0"/>
+                        <TextBlock x:Name="roomNumberTxtB" Text="{Binding Number}" Grid.Row="0" Grid.Column="1" FontSize="18"/>
+                        <Label Content="Capacity" Grid.Row="0" Grid.Column="2"/>
+                        <TextBlock x:Name="roomCapacityTxtB" Text="{Binding Capacity}" Grid.Row="0" Grid.Column="3" FontSize="18"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

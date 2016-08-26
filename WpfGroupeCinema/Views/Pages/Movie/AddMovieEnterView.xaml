@@ -22,7 +22,7 @@
         <userControl:AddMovieUserControl x:Name="addMovieUserControl" Grid.Row="1" />
         <userControl:RoomListUserControl x:Name="roomListUserControl" Grid.Row="2" />
         <!--<Button x:Name="BtnAdd" Content="Add" Grid.Row="3" Click="BtnAdd_Click"/>-->
-        <Button x:Name="btnAdd" Content="Add" Grid.Row="3"/>
-        <Button x:Name="BtnHome" Content="Home" Grid.Row="4" Click="BtnNavigate2_Click"/>
+        <Button x:Name="btnAdd" Content="Add" Grid.Row="3" Margin="10" FontSize="20"/>
+        <Button x:Name="BtnHome" Content="Home" Grid.Row="4" Click="BtnNavigate2_Click" Margin="10" FontSize="20"/>
     </Grid>
 </Page>

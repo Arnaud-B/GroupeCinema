@@ -19,9 +19,9 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <Button x:Name="BtnManagement" Content="Gestion" Grid.Row="1" Click="BtnManagement_Click"/>
-        <Button x:Name="BtnProducts" Content="Produits" Grid.Row="2" Click="BtnProducts_Click"/>
-        <Button x:Name="BtnFilms" Content="Films" Grid.Row="3" Click="BtnMovies_Click"/>
-        <Button x:Name="Btn_Home" Content="Home" Grid.Row="4" Click="BtnNavigate_Click"/>
+        <Button x:Name="BtnManagement" Content="Management" Grid.Row="1" Click="BtnManagement_Click" Margin="10" FontSize="20"/>
+        <Button x:Name="BtnProducts" Content="Products" Grid.Row="2" Click="BtnProducts_Click" Margin="10" FontSize="20"/>
+        <Button x:Name="BtnFilms" Content="Movie" Grid.Row="3" Click="BtnMovies_Click" Margin="10" FontSize="20"/>
+        <Button x:Name="Btn_Home" Content="Home" Grid.Row="4" Click="BtnNavigate_Click" Margin="10" FontSize="20"/>
     </Grid>
 </Page>

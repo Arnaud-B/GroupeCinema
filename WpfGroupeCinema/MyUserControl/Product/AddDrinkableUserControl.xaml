@@ -15,11 +15,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="200*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="0" x:Name="drinkableNameTxtB" Text="Name"/>
-        <TextBox Grid.Row="1" Grid.Column="0" x:Name="drinkablePriceTxtB" Text="Price" />
-        <TextBox Grid.Row="2" Grid.Column="0" x:Name="drinkableLiterTxtB" Text="Liter" />
-        <TextBox Grid.Row="3" Grid.Column="0" x:Name="drinkableNumberTxtB" Text="Number" />
+        <Label Content="Name" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="drinkableNameTxtB" Text="Cola" Margin="10" />
+        <Label Content="Price (€)" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="drinkablePriceTxtB" Text="5" Margin="10" />
+        <Label Content="Liter (L)" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="drinkableLiterTxtB" Text="1" Margin="10" />
+        <Label Content="Number" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="drinkableNumberTxtB" Text="5" Margin="10" />
     </Grid>
 </baseUserControl:BaseUserControl>

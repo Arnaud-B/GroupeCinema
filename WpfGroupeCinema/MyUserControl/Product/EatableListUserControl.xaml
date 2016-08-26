@@ -16,9 +16,9 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock x:Name="eatableIdTxtB" Text="{Binding Id}" Grid.Row="0" Grid.Column="0"/>
                         <TextBlock x:Name="eatableNameTxtB" Text="{Binding Name}" Grid.Row="0" Grid.Column="1"/>

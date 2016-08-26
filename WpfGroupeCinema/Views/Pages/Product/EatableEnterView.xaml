@@ -25,7 +25,7 @@
         <TextBox Grid.Row="3" Text="11" Name="Weight" />-->
         <userControl:AddEatableUserControl x:Name="addEatableUserControl" Grid.Row="1" />
 
-        <Button x:Name="BtnAdd" Content="Add" Grid.Row="2" Click="BtnAdd_Click"/>
-        <Button x:Name="BtnHome" Content="Home" Grid.Row="3" Click="BtnNavigate2_Click"/>
+        <Button x:Name="BtnAdd" Content="Add" Grid.Row="2" Click="BtnAdd_Click" Margin="10" FontSize="20"/>
+        <Button x:Name="BtnHome" Content="Home" Grid.Row="3" Click="BtnNavigate2_Click" Margin="10" FontSize="20"/>
     </Grid>
 </Page>

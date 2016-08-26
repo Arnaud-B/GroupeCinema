@@ -15,11 +15,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="200*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="0" x:Name="eatableNameTxtB" Text="Name"/>
-        <TextBox Grid.Row="1" Grid.Column="0" x:Name="eatablePriceTxtB" Text="Price" />
-        <TextBox Grid.Row="2" Grid.Column="0" x:Name="eatableWeightTxtB" Text="Weight" />
-        <TextBox Grid.Row="3" Grid.Column="0" x:Name="eatableNumberTxtB" Text="Number" />
+        <Label Content="Name" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="eatableNameTxtB" Text="Pop-corn" Margin="10" />
+        <Label Content="Price (€)" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="eatablePriceTxtB" Text="5" Margin="10" />
+        <Label Content="Weight (Kg)" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="eatableWeightTxtB" Text="1" Margin="10" />
+        <Label Content="Number" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="eatableNumberTxtB" Text="5" Margin="10" />
     </Grid>
 </baseUserControl:BaseUserControl>

@@ -15,11 +15,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="200*"/>
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="0" x:Name="movieNameTxtB" Text="Name"/>
-        <TextBox Grid.Row="1" Grid.Column="0" x:Name="movieAuthorTxtB" Text="author" />
-        <TextBox Grid.Row="2" Grid.Column="0" x:Name="movieLengthTxtB" Text="length" />
-        <TextBox Grid.Row="3" Grid.Column="0" x:Name="movieRentTimeTxtB" Text="rentTime" />
+        <Label Content="Name" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" Margin="5"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="movieNameTxtB" Text="Enter The Void" Margin="5" />
+        <Label Content="Author" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Margin="5"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="movieAuthorTxtB" Text="Gaspar Noé" Margin="5" />
+        <Label Content="Length (min)" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" Margin="5"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="movieLengthTxtB" Text="90" Margin="5" />
+        <Label Content="RentTime (weeks)" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center" Margin="5"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="movieRentTimeTxtB" Text="5" Margin="5" />
     </Grid>
 </baseUserControl:BaseUserControl>
