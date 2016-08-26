@@ -12,7 +12,6 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <!--<RowDefinition/>-->
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -20,6 +19,5 @@
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
         <userControl:CinemaListUserControl x:Name="cinemaListUserControl" Grid.Row="1" />
         <Button x:Name="myBtn" Grid.Row="2" Content="Choose" FontSize="20" Click="myBtn_Click" Margin="10"/>
-        <!--<Button x:Name="btnPopulate" Content="Populate" FontSize="20" Grid.Row="3" Margin="10"/>-->
     </Grid>
 </Page>

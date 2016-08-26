@@ -40,13 +40,13 @@ namespace WpfGroupeCinema.Views
         public ProductEnterView(Cinema cinema)
         {
             InitializeComponent();
-            this.productEnterViewModel = new ProductEnterViewModel(this);
+            this.productEnterViewModel = new ProductEnterViewModel(this, cinema);
             this.cinema = cinema;
-            ProductEnterViewModel.ProductEnterView.cinemaUserControl.Cinema = cinema;
+            this.productEnterViewModel.ProductEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
         }
 
 
-        private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
+        private void BtnNavigate_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Do you want go to home ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)

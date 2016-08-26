@@ -94,11 +94,20 @@
     <Compile Include="MyUserControl\Cinema\CinemaManagementUserControl.xaml.cs">
       <DependentUpon>CinemaManagementUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\Cinema\HomeCinemaUserControl.xaml.cs">
+      <DependentUpon>HomeCinemaUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\HomeUserControl.xaml.cs">
+      <DependentUpon>HomeUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\Movie\MovieListUserControl.xaml.cs">
       <DependentUpon>MovieListUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\Movie\MovieManagementUserControl.xaml.cs">
       <DependentUpon>MovieManagementUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\Movie\MovieMenuUserControl.xaml.cs">
+      <DependentUpon>MovieMenuUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyUserControl\Product\AddDrinkableUserControl.xaml.cs">
       <DependentUpon>AddDrinkableUserControl.xaml</DependentUpon>
@@ -194,9 +203,6 @@
     <Compile Include="Views\Pages\Product\ProductEnterView.xaml.cs">
       <DependentUpon>ProductEnterView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -213,11 +219,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MyUserControl\Cinema\HomeCinemaUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\HomeUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MyUserControl\Movie\MovieListUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\Movie\MovieManagementUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\Movie\MovieMenuUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -326,10 +344,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\Product\ProductEnterView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

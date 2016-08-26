@@ -44,9 +44,10 @@ namespace WpfGroupeCinema.Views
             this.cinema = cinema;
             this.addMovieEnterViewModel = new AddMovieEnterViewModel(this, cinema);
             AddMovieEnterViewModel.AddMovieEnterView.cinemaUserControl.Cinema = cinema;
+            AddMovieEnterViewModel.AddMovieEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
         }
 
-        private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
+        private void BtnNavigate_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Do you want go to home ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)

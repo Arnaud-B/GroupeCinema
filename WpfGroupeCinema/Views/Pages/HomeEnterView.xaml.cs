@@ -44,10 +44,10 @@ namespace WpfGroupeCinema.Views
         private void myBtn_Click(object sender, RoutedEventArgs e)
         {
             
-            Cinema cinemaChoose = homeEnterViewModel.HomeEnterView.cinemaUserControl.Cinema;
-            if(cinemaChoose != null)
+            Cinema cinema = homeEnterViewModel.HomeEnterView.cinemaUserControl.Cinema;
+            if(cinema != null)
             {
-                this.NavigationService.Navigate(new HomeCinemaEnterView(cinemaChoose));
+                this.NavigationService.Navigate(new HomeCinemaEnterView(cinema));
             }
             
         }

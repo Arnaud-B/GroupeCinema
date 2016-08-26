@@ -21,6 +21,6 @@
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
         <Button x:Name="btnSelect" Grid.Row="1" Content="Select" Click="btnSelect_Click" Margin="10" FontSize="20"/>
         <Button x:Name="btnAdd" Content="add" Grid.Row="2" Click="btnAdd_Click" Margin="10" FontSize="20"/>
-        <Button x:Name="BtnHome" Content="Home" Grid.Row="3" Click="BtnNavigate2_Click" Margin="10" FontSize="20"/>
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="4"/>
     </Grid>
 </Page>

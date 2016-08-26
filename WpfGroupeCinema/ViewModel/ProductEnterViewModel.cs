@@ -23,9 +23,10 @@ namespace WpfGroupeCinema.ViewModel
             this.productEnterView = productEnterView;
         }
 
-        public ProductEnterViewModel(Cinema cinema)
+        public ProductEnterViewModel(ProductEnterView productEnterView, Cinema cinema)
         {
-            //this.productEnterView = productEnterView;
+            this.productEnterView = productEnterView;
+            this.ProductEnterView.cinemaUserControl.Cinema = cinema;
         }
 
     }
