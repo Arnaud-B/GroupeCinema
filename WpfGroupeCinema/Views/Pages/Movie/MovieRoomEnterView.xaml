@@ -13,14 +13,12 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
         <userControl:MovieListUserControl x:Name="movieListUserControl" Grid.Row="1" />
-        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="4"/>
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="2"/>
     </Grid>
 </Page>

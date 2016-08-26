@@ -10,19 +10,15 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <Button x:Name="btnAddMovie" Grid.Row="1" Content="Add Movie" Click="btnAddMovie_Click" Margin="10" FontSize="20"/>
-        <Button x:Name="btnMovie" Content="Select Movie" Grid.Row="2" Click="btnMovie_Click" Margin="10" FontSize="20"/>
-        <Button x:Name="btnRoom" Content="Room" Grid.Row="3" Click="btnRoom_Click" Margin="10" FontSize="20"/>
-        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="4"/>
+        <userControl:MovieMenuUserControl x:Name="movieMenuUserControl" Grid.Row="1"/>
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="2"/>
     </Grid>
 </Page>

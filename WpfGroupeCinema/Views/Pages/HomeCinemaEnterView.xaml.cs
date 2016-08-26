@@ -45,6 +45,9 @@ namespace WpfGroupeCinema.Views
             this.cinema = cinema;
             HomeCinemaEnterViewModel.HomeCinemaEnterView.cinemaUserControl.Cinema = cinema;
             HomeCinemaEnterViewModel.HomeCinemaEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
+            HomeCinemaEnterViewModel.HomeCinemaEnterView.homeCinemaUserControl.BtnMovie.Click += BtnMovies_Click;
+            HomeCinemaEnterViewModel.HomeCinemaEnterView.homeCinemaUserControl.BtnManagement.Click += BtnManagement_Click;
+            HomeCinemaEnterViewModel.HomeCinemaEnterView.homeCinemaUserControl.BtnProducts.Click += BtnProducts_Click;
         }
 
     

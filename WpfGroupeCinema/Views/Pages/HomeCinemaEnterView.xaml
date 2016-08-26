@@ -9,19 +9,15 @@
       Title="HomeCinemaEnterView">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/> 
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <Button x:Name="BtnManagement" Content="Management" Grid.Row="1" Click="BtnManagement_Click" Margin="10" FontSize="20"/>
-        <Button x:Name="BtnProducts" Content="Products" Grid.Row="2" Click="BtnProducts_Click" Margin="10" FontSize="20"/>
-        <Button x:Name="BtnFilms" Content="Movie" Grid.Row="3" Click="BtnMovies_Click" Margin="10" FontSize="20"/>
-        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="4"/>
+        <userControl:HomeCinemaUserControl x:Name="homeCinemaUserControl" Grid.Row="1"/>
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="2"/>
     </Grid>
 </Page>
