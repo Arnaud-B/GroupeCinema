@@ -44,7 +44,10 @@ CREATE TABLE IF NOT EXISTS `address` (
 --
 
 INSERT INTO `address` (`id`, `path`, `number`, `street`, `city`) VALUES
-(1, 'rue', 2, 'Paix', 'Paris');
+(1, 'Quai', 2, 'Jacques Brel', 'Val-André'),
+(2, 'Quai', 3, '18 mai', 'Erquy'),
+(3, 'Rue', 10, 'Mansart', "Sable d'or"),
+(4, 'Avenue', 6, 'Théodore Monod', 'Saint-Malo');
 
 -- --------------------------------------------------------
 
@@ -67,10 +70,10 @@ CREATE TABLE IF NOT EXISTS `cinema` (
 --
 
 INSERT INTO `cinema` (`id`, `credit`, `finance`, `name`, `address_id`) VALUES
-(1, '0.00', '10000.00', 'cinema 1', 1),
-(2, '0.00', '150000.00', 'cinema 2', 1),
-(3, '0.00', '105000.00', 'cinema 3', 1),
-(4, '0.00', '200000.00', 'cinema 4', 1);
+(1, '0.00', '100000.00', 'Cinéma La Rotonde', 1),
+(2, '0.00', '150000.00', 'Cinéma Eden', 2),
+(3, '0.00', '105000.00', 'Armor Cinema', 3),
+(4, '0.00', '200000.00', 'Cinéma Le Vauban', 4);
 
 -- --------------------------------------------------------
 
@@ -103,7 +106,7 @@ CREATE TABLE IF NOT EXISTS `drinkable` (
   `Name` longtext,
   `Price` decimal(18,2) NOT NULL,
   `Number` int(11) NOT NULL,
-  `BuyDate` datetime NOT NULL,
+  `BuyDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Cinema_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
@@ -113,7 +116,14 @@ CREATE TABLE IF NOT EXISTS `drinkable` (
 --
 
 INSERT INTO `drinkable` (`id`, `liter`, `Name`, `Price`, `Number`, `BuyDate`, `Cinema_id`) VALUES
-(1, '1.00', 'Coca-Cola', '4.00', 0, '0001-01-01 00:00:00', 0);
+(1, '0.5', 'Coca-Cola', '3.00', 500, '2016-08-18 14:00:00', 1),
+(2, '0.33', 'Coca-Cola', '2.50', 700, '2016-08-18 14:00:00', 2),
+(3, '0.2', 'Café', '3.00', 300, '2016-08-18 14:00:00', 3),
+(4, '0.5', "Jus d'orange", '2.00', 300, '2016-08-18 14:00:00', 4),
+(5, '0.5', 'Jus de pomme', '2.00', 500, '2016-08-18 14:00:00', 1),
+(6, '0.33', 'Coca-Cola', '2.50', 700, '2016-08-18 14:00:00', 4),
+(7, '0.3', 'Café', '3.00', 300, '2016-08-18 14:00:00', 2),
+(8, '0.33', "Jus d'orange", '1.50', 300, '2016-08-18 14:00:00', 3);
 
 -- --------------------------------------------------------
 
@@ -128,10 +138,24 @@ CREATE TABLE IF NOT EXISTS `eatable` (
   `Name` longtext,
   `Price` decimal(18,2) NOT NULL,
   `Number` int(11) NOT NULL,
-  `BuyDate` datetime NOT NULL,
+  `BuyDate` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Cinema_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `eatable`
+--
+
+INSERT INTO `eatable` (`id`, `Weight`, `Name`, `Price`, `Number`, `BuyDate`, `Cinema_id`) VALUES
+(1, '0.5', 'Pop-Corn', '5.00', 500, '2016-08-18 14:00:00', 1),
+(2, '0.33', 'Barre chocolatée', '2.50', 700, '2016-08-18 14:00:00', 2),
+(3, '0.2', 'Pop-Corn', '3.00', 300, '2016-08-18 14:00:00', 3),
+(4, '0.3', "Pop-Corn", '3.00', 300, '2016-08-18 14:00:00', 4),
+(5, '0.5', 'Pomme', '0.80', 500, '2016-08-18 14:00:00', 1),
+(6, '0.33', 'Chocolat', '2.50', 700, '2016-08-18 14:00:00', 4),
+(7, '0.3', 'Choclat', '3.00', 300, '2016-08-18 14:00:00', 2),
+(8, '0.33', 'Pomme', '1.50', 300, '2016-08-18 14:00:00', 3);
 
 -- --------------------------------------------------------
 

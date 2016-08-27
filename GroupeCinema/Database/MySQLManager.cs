@@ -15,6 +15,7 @@ namespace GroupeCinema.Database
         public DbSet<TEntity> DbSetT { get; set; }
         public MySQLManager(DataConnectionResource dataConnectionResource) : base(EnumString.GetStringValue(dataConnectionResource))
         {
+            Console.WriteLine(EnumString.GetStringValue(dataConnectionResource));
             FullDb db = new FullDb(dataConnectionResource);
         }
         

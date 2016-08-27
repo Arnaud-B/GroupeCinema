@@ -22,7 +22,7 @@ namespace WpfGroupeCinema.ViewModel
         }
 
         public HomeCinemaEnterViewModel(HomeCinemaEnterView homeCinemaEnterView)
-        {
+        {         
             this.homeCinemaEnterView = homeCinemaEnterView;
         }
 
@@ -39,6 +39,9 @@ namespace WpfGroupeCinema.ViewModel
                 MySQLManager<Cinema> manager = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
                 results = manager.Get(cinema.Id).Result as Cinema;
             });
+
+           
+
 
             if (results != null)
             {

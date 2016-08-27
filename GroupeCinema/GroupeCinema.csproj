@@ -95,8 +95,11 @@
     <Compile Include="Cinema\Entities\UserCategory\Client.cs" />
     <Compile Include="Cinema\Entities\User.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Database\CheckDB.cs" />
+    <Compile Include="Database\Crud.cs" />
     <Compile Include="Database\FullDb.cs" />
     <Compile Include="Database\MySQLManager.cs" />
+    <Compile Include="Enums\EnumCrud.cs" />
     <Compile Include="Logger\AlertMode.cs" />
     <Compile Include="Enums\DataConnectionRessource.cs" />
     <Compile Include="Enums\Enums1.cs" />

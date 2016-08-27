@@ -16,13 +16,17 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100*"/>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="100*"/>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="100*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock x:Name="drinkableIdTxtB" Text="{Binding Id}" Grid.Row="0" Grid.Column="0"/>
-                        <TextBlock x:Name="drinkableNameTxtB" Text="{Binding Name}" Grid.Row="0" Grid.Column="1"/>
-                        <TextBlock x:Name="drinkablePriceTxtB" Text="{Binding Price}" Grid.Row="0" Grid.Column="2"/>
+                        <TextBlock x:Name="drinkableNameTxtB" Text="{Binding Name}" Grid.Row="0" Grid.Column="0" FontSize="18"/>
+                        <Label Content="Number :" Grid.Row="0" Grid.Column="1"/>
+                        <TextBlock x:Name="drinkableNumberTxtB" Text="{Binding Number}" Grid.Row="0" Grid.Column="2" FontSize="18"/>
+                        <Label Content="Price :" Grid.Row="0" Grid.Column="3"/>
+                        <TextBlock x:Name="drinkablePriceTxtB" Text="{Binding Price}" Grid.Row="0" Grid.Column="4" FontSize="18"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

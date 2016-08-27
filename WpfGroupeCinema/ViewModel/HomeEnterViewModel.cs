@@ -45,7 +45,10 @@ namespace WpfGroupeCinema.ViewModel
                 results = manager5.Get().Result as List<Cinema>;
                 
             });
-            
+
+            //Crud<Cinema> manager5 = new Crud<Cinema>();
+            //results = manager5.Get().Result as List<Cinema>;
+
             if (results != null)
             {
                 this.HomeEnterView.cinemaListUserControl.LoadItems(results);
