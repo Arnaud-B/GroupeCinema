@@ -45,6 +45,8 @@ namespace WpfGroupeCinema.Views
             this.cinema = cinema;
             AddProductEnterViewModel.AddProductEnterView.cinemaUserControl.Cinema = cinema;
             AddProductEnterViewModel.AddProductEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
+            AddProductEnterViewModel.AddProductEnterView.addProductTypeUserControl.btnDrinkable.Click += btnDrinkable_Click;
+            AddProductEnterViewModel.AddProductEnterView.addProductTypeUserControl.btnEatable.Click += btnEatable_Click;
         }
 
         private void BtnNavigate_Click(object sender, RoutedEventArgs e)

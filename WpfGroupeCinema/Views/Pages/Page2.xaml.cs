@@ -30,7 +30,7 @@ namespace WpfGroupeCinema.Views.Pages
         }
         private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new CinemaEnterView());
+            //this.NavigationService.Navigate(new CinemaEnterView());
         }
 
         private void BtnNavigate3_Click(object sender, RoutedEventArgs e)

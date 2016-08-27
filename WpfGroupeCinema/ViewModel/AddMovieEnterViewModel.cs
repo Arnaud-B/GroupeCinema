@@ -35,7 +35,7 @@ namespace WpfGroupeCinema.ViewModel
 
             this.AddMovieEnterView.roomListUserControl.roomsListView.SelectionChanged += RoomListView_SelectionChanged;
 
-            this.AddMovieEnterView.btnAdd.Click += BtnAdd_Click;
+            this.AddMovieEnterView.addItemUserControl.BtnAdd.Click += BtnAdd_Click;
 
             SetupRoomList(cinema);
         }

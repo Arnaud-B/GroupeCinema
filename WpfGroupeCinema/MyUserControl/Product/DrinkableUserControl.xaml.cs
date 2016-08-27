@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfGroupeCinema.CinemaListUserControl;
 
-namespace WpfGroupeCinema.MyUserControl
+namespace WpfGroupeCinema.CinemaListUserControl
 {
     /// <summary>
     /// Interaction logic for DrinkableUserControl.xaml

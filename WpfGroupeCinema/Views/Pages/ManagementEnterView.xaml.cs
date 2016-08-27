@@ -49,7 +49,8 @@ namespace WpfGroupeCinema.Views
             ManagementEnterViewModel.ManagementEnterView.productManagementUserControl.BtnEatable.Click += BtnEatable_Click;
 
             ManagementEnterViewModel.ManagementEnterView.productManagementUserControl.BtnProduct.Click += BtnProduct_Click;
-  
+
+            ManagementEnterViewModel.ManagementEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
         }
 
        
@@ -82,7 +83,7 @@ namespace WpfGroupeCinema.Views
             }
         }
 
-        private void BtnNavigate2_Click(object sender, RoutedEventArgs e)
+        private void BtnNavigate_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Do you want go to home ?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
             if (result == MessageBoxResult.Yes)

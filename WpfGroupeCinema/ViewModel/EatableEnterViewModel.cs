@@ -32,7 +32,7 @@ namespace WpfGroupeCinema.ViewModel
             this.eatableEnterView = eatableEnterView;
             this.cinema = cinema;
             this.EatableEnterView.cinemaUserControl.Cinema = cinema;
-            this.EatableEnterView.BtnAdd.Click += BtnAdd_Click;
+            this.EatableEnterView.addItemUserControl.BtnAdd.Click += BtnAdd_Click;
         }
 
         private async void BtnAdd_Click(object sender, RoutedEventArgs e)

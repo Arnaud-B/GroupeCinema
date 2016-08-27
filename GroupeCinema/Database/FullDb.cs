@@ -53,11 +53,6 @@ namespace GroupeCinema.Database
         public DbSet<Client> DbSetClient { get; set; }
         public DbSet<Employee> DbSetEmployee { get; set; }
 
-        // Provider
-        //public DbSet<Provider> DbSetProvider { get; set; }
-        public DbSet<ProductProvider> DbSetProductProvider { get; set; }
-        public DbSet<MovieProvider> DbSetMovieProvider { get; set; }
-
         public DbSet<Address> DbSetAddress { get; set; }
 
         public FullDb(DataConnectionResource dataConnectionResource) : base(EnumString.GetStringValue(dataConnectionResource))

@@ -10,17 +10,15 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <Button x:Name="btnDrinkable" Grid.Row="1" Content="Add Drinkable" Click="btnDrinkable_Click" Margin="10" FontSize="20"/>
-        <Button x:Name="btnEatable" Content="Add Eatable" Grid.Row="2" Click="btnEatable_Click" Margin="10" FontSize="20"/>
-        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="3"/>
+        <userControl:AddProductTypeUserControl x:Name="addProductTypeUserControl" Grid.Row="1" />
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="2"/>
     </Grid>
 </Page>

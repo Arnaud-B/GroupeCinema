@@ -14,15 +14,13 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
-                         
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <!--<TextBlock x:Name="cinemaIdTxtB" Text="{Binding Id}" Grid.Row="0" Grid.Column="0"/>-->
                         <TextBlock x:Name="cinemaNameTxtB" Text="{Binding Name}" Grid.Row="0" Grid.Column="0" FontSize="15"/>
-                        <!--<TextBlock x:Name="cinemaFinanceTxtB" Text="{Binding Finance}" Grid.Row="0" Grid.Column="2"/>-->
-                       
+                        <!--<Button x:Name="btnChoose" Grid.Row="1" Content="Choose" FontSize="20" Margin="10"/>-->
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

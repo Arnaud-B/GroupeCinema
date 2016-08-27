@@ -23,6 +23,6 @@
         <userControl:CinemaManagementUserControl x:Name="managementCinemaUserControl" Grid.Row="1" />
         <userControl:MovieManagementUserControl x:Name="movieCinemaUserControl" Grid.Row="2" />
         <userControl:ProductManagementUserControl x:Name="productManagementUserControl" Grid.Row="3" />
-        <Button x:Name="BtnHome" Content="Home" Grid.Row="4" Click="BtnNavigate2_Click" Margin="10" FontSize="20"/>
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="4"/>
     </Grid>
 </Page>

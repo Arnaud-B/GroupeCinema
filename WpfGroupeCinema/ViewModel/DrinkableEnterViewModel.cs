@@ -31,7 +31,7 @@ namespace WpfGroupeCinema.ViewModel
             this.drinkableEnterView = drinkableEnterView;
             this.cinema = cinema;
             this.DrinkableEnterView.cinemaUserControl.Cinema = cinema;
-            this.DrinkableEnterView.BtnAdd.Click += BtnAdd_Click;
+            this.DrinkableEnterView.addItemUserControl.BtnAdd.Click += BtnAdd_Click;
         }
 
         private async void BtnAdd_Click(object sender, System.Windows.RoutedEventArgs e)

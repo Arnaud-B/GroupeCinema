@@ -18,6 +18,6 @@
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
         <userControl:CinemaListUserControl x:Name="cinemaListUserControl" Grid.Row="1" />
-        <Button x:Name="myBtn" Grid.Row="2" Content="Choose" FontSize="20" Click="myBtn_Click" Margin="10"/>
+        <userControl:ChooseCinemaUserControl x:Name="chooseCinemaUserControl" Grid.Row="2" />
     </Grid>
 </Page>

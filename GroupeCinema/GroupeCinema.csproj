@@ -86,15 +86,12 @@
     <Compile Include="Cinema\Entities\Observable\Test\NotifiedClass.cs" />
     <Compile Include="Cinema\Entities\Observable\Test\ObservedClass.cs" />
     <Compile Include="Cinema\Entities\Room.cs" />
-    <Compile Include="Cinema\Entities\UserCategory\Provider.cs" />
     <Compile Include="Cinema\Entities\UserCategory\Employee.cs" />
     <Compile Include="Cinema\Entities\Movie.cs" />
     <Compile Include="Cinema\Entities\UserCategory\Owner.cs" />
     <Compile Include="Cinema\Entities\Product.cs" />
     <Compile Include="Cinema\Entities\ProductCategory\Drinkable.cs" />
     <Compile Include="Cinema\Entities\ProductCategory\Eatable.cs" />
-    <Compile Include="Cinema\Entities\UserCategory\ProviderCategory\MovieProvider.cs" />
-    <Compile Include="Cinema\Entities\UserCategory\ProviderCategory\ProductProvider.cs" />
     <Compile Include="Cinema\Entities\UserCategory\Client.cs" />
     <Compile Include="Cinema\Entities\User.cs" />
     <Compile Include="Class1.cs" />

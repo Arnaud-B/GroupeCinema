@@ -16,23 +16,9 @@ namespace GroupeCinema.Cinema
         private String author;
         private Int32 length;
         private DateTime releaseDate;
-        private MovieProvider movieProvider;
         #endregion
 
         #region Properties
-        public MovieProvider MovieProvider
-        {
-            get
-            {
-                return this.movieProvider;
-            }
-
-            set
-            {
-                this.movieProvider = value;
-                this.OnPropertyChanged("MovieProvidor");
-            }
-        }
         [Column("name")]
         public String Name
         {

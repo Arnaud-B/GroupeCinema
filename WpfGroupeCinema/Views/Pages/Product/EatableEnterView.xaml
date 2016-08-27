@@ -20,12 +20,8 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <!--<TextBox Grid.Row="1" Name="Name" Text="name"/>
-        <TextBox Grid.Row="2" Name="Price" Text="12" />
-        <TextBox Grid.Row="3" Text="11" Name="Weight" />-->
         <userControl:AddEatableUserControl x:Name="addEatableUserControl" Grid.Row="1" />
-
-        <Button x:Name="BtnAdd" Content="Add" Grid.Row="2" Margin="10" FontSize="20"/>
+        <userControl:AddItemUserControl x:Name="addItemUserControl" Grid.Row="2"/>
         <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="3"/>
     </Grid>
 </Page>

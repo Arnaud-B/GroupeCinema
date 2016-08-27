@@ -1,4 +1,7 @@
-﻿using GroupeCinema.Cinema;
+﻿using GroupeCinema.API;
+using GroupeCinema.Cinema;
+using GroupeCinema.Database;
+using GroupeCinema.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +42,7 @@ namespace WpfGroupeCinema.Views
         {
             InitializeComponent();
             this.homeEnterViewModel = new HomeEnterViewModel(this);
+            homeEnterViewModel.HomeEnterView.chooseCinemaUserControl.btnChoose.Click += myBtn_Click;
         }
 
         private void myBtn_Click(object sender, RoutedEventArgs e)
@@ -51,5 +55,6 @@ namespace WpfGroupeCinema.Views
             }
             
         }
+        
     }
 }
