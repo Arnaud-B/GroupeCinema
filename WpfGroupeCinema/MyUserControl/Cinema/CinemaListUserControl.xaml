@@ -20,7 +20,6 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock x:Name="cinemaNameTxtB" Text="{Binding Name}" Grid.Row="0" Grid.Column="0" FontSize="15"/>
-                        <!--<Button x:Name="btnChoose" Grid.Row="1" Content="Choose" FontSize="20" Margin="10"/>-->
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

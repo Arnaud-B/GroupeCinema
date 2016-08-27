@@ -46,8 +46,8 @@ namespace WpfGroupeCinema.CinemaListUserControl
         {
             InitializeComponent();
             this.Movies = new ObservableCollection<Movie>();
-            this.roomsListView.ItemsSource = this.Movies;
-            this.listView = this.roomsListView;
+            this.moviesListView.ItemsSource = this.Movies;
+            this.listView = this.moviesListView;
         }
 
         public void LoadItems(List<Movie> items)

@@ -44,8 +44,7 @@ namespace WpfGroupeCinema.CinemaListUserControl
         {
             this.Eatables.Clear();
             foreach (var item in items)
-            {
-              
+            {      
                 if (item.Cinema_id == cinema.Id)
                 {
                     Eatables.Add(item);

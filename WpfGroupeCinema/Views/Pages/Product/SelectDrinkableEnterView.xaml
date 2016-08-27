@@ -1,12 +1,12 @@
-﻿<Page x:Class="WpfGroupeCinema.Views.EatableEnterView"
+﻿<Page x:Class="WpfGroupeCinema.Views.SelectDrinkableEnterView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfGroupeCinema.Views"
       xmlns:userControl="clr-namespace:WpfGroupeCinema.CinemaListUserControl"
-      mc:Ignorable="d" 
-      Title="EatableEnterView">
+      mc:Ignorable="d"
+      Title="SelectDrinkableEnterView">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -16,11 +16,11 @@
             <RowDefinition Height="15*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <userControl:AddEatableUserControl x:Name="addEatableUserControl" Grid.Row="1" />
-        <userControl:AddItemUserControl x:Name="addItemUserControl" Grid.Row="2"/>
+        <userControl:UpdateDrinkableUserControl x:Name="updateDrinkableUserControl" Grid.Row="1" />
+        <userControl:UpdateItemUserControl x:Name="updateItemUserControl" Grid.Row="2"/>
         <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="3"/>
     </Grid>
 </Page>

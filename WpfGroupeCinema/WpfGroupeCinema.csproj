@@ -115,6 +115,9 @@
     <Compile Include="MyUserControl\Movie\MovieMenuUserControl.xaml.cs">
       <DependentUpon>MovieMenuUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\Movie\UpdateMovieUserControl.xaml.cs">
+      <DependentUpon>UpdateMovieUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyUserControl\Product\AddDrinkableUserControl.xaml.cs">
       <DependentUpon>AddDrinkableUserControl.xaml</DependentUpon>
     </Compile>
@@ -161,6 +164,15 @@
     <Compile Include="MyUserControl\Product\ProductMenuUserControl.xaml.cs">
       <DependentUpon>ProductMenuUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyUserControl\Product\UpdateDrinkableUserControl.xaml.cs">
+      <DependentUpon>UpdateDrinkableUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\Product\UpdateEatableUserControl.xaml.cs">
+      <DependentUpon>UpdateEatableUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyUserControl\UpdateItemUserControl.xaml.cs">
+      <DependentUpon>UpdateItemUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\AddMovieEnterViewModel.cs" />
     <Compile Include="ViewModel\AddProductEnterViewModel.cs" />
     <Compile Include="ViewModel\DrinkableEnterViewModel.cs" />
@@ -172,6 +184,9 @@
     <Compile Include="ViewModel\MovieRoomEnterViewModel.cs" />
     <Compile Include="ViewModel\ProductEnterViewModel.cs" />
     <Compile Include="ViewModel\ProductGestionEnterViewModel.cs" />
+    <Compile Include="ViewModel\SelectDrinkableEnterViewModel.cs" />
+    <Compile Include="ViewModel\SelectEatableEnterViewModel.cs" />
+    <Compile Include="ViewModel\SelectMovieEnterViewModel.cs" />
     <Compile Include="Views\Pages\ManagementEnterView.xaml.cs">
       <DependentUpon>ManagementEnterView.xaml</DependentUpon>
     </Compile>
@@ -180,6 +195,9 @@
     </Compile>
     <Compile Include="Views\Pages\Movie\MovieRoomEnterView.xaml.cs">
       <DependentUpon>MovieRoomEnterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Movie\SelectMovieEnterView.xaml.cs">
+      <DependentUpon>SelectMovieEnterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Pages\Product\AddProductEnterView.xaml.cs">
       <DependentUpon>AddProductEnterView.xaml</DependentUpon>
@@ -210,6 +228,12 @@
     </Compile>
     <Compile Include="Views\Pages\Product\ProductEnterView.xaml.cs">
       <DependentUpon>ProductEnterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Product\SelectDrinkableEnterView.xaml.cs">
+      <DependentUpon>SelectDrinkableEnterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\Product\SelectEatableEnterView.xaml.cs">
+      <DependentUpon>SelectEatableEnterView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -252,6 +276,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyUserControl\Movie\MovieMenuUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\Movie\UpdateMovieUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -315,6 +343,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MyUserControl\Product\UpdateDrinkableUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\Product\UpdateEatableUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyUserControl\UpdateItemUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Pages\ManagementEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -324,6 +364,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\Movie\MovieRoomEnterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\Movie\SelectMovieEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -364,6 +408,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Pages\Product\ProductEnterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\Product\SelectDrinkableEnterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\Product\SelectEatableEnterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

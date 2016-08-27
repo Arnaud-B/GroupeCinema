@@ -15,6 +15,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -24,6 +25,7 @@
         <userControl:DrinkableListUserControl x:Name="drinkableListUserControl" Grid.Row="2" />
         <Label Content="Eatable" FontSize="15" Grid.Row="3"/>
         <userControl:EatableListUserControl x:Name="eatableListUserControl" Grid.Row="4" />
-        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="5"/>
+        <userControl:ChooseCinemaUserControl x:Name="chooseProductUserControl" Grid.Row="5" />
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="6"/>
     </Grid>
 </Page>

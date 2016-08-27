@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using WpfGroupeCinema.Views;
 using WpfGroupeCinema.Views.Pages;
+using System.Windows.Controls;
+using System.Windows;
 
 namespace WpfGroupeCinema.ViewModel
 {
@@ -15,6 +17,8 @@ namespace WpfGroupeCinema.ViewModel
     {
         private ProductGestionEnterView productGestionEnterView;
         private Cinema cinema;
+        private Eatable eatable;
+        private Drinkable drinkable;
 
         public ProductGestionEnterView ProductGestionEnterView
         {
@@ -30,9 +34,12 @@ namespace WpfGroupeCinema.ViewModel
         public ProductGestionEnterViewModel(ProductGestionEnterView productGestionEnterView, Cinema cinema)
         {
             this.productGestionEnterView = productGestionEnterView;
+          
             SetupEatableList(cinema);
             SetupDrinkableList(cinema);
         }
+
+        
         private async void SetupEatableList(Cinema cinema)
         {
             List<Eatable> results = new List<Eatable>();

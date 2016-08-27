@@ -46,8 +46,6 @@ namespace WpfGroupeCinema.ViewModel
                 
             });
             
-           
-            Console.WriteLine(results.Count);
             if (results != null)
             {
                 this.HomeEnterView.cinemaListUserControl.LoadItems(results);
@@ -70,7 +68,6 @@ namespace WpfGroupeCinema.ViewModel
             {
                 Cinema cinema = new Cinema();
                 cinema = (Cinema)e.AddedItems[0];
-                Console.WriteLine(cinema.Id);
                 this.homeEnterView.cinemaUserControl.Cinema = (Cinema)e.AddedItems[0];                
             }
         }

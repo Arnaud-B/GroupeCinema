@@ -1,26 +1,28 @@
-﻿<Page x:Class="WpfGroupeCinema.Views.MovieRoomEnterView"
+﻿<Page x:Class="WpfGroupeCinema.Views.SelectMovieEnterView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfGroupeCinema.Views"
       xmlns:userControl="clr-namespace:WpfGroupeCinema.CinemaListUserControl"
-      mc:Ignorable="d" 
-      Title="MovieRoomEnterView">
+      mc:Ignorable="d"
+      Title="SelectMovieEnterView">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <userControl:CinemaUserControl x:Name="cinemaUserControl" Grid.Row="0" />
-        <userControl:MovieListUserControl x:Name="movieListUserControl" Grid.Row="1" />
-        <userControl:ChooseCinemaUserControl x:Name="chooseMovieUserControl" Grid.Row="2" />
-        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="3"/>
+        <userControl:UpdateMovieUserControl x:Name="updateMovieUserControl" Grid.Row="1" />
+        <userControl:RoomListUserControl x:Name="roomListUserControl" Grid.Row="2" />
+        <userControl:UpdateItemUserControl x:Name="updateItemUserControl" Grid.Row="3" />
+        <userControl:HomeUserControl x:Name="homeUserControl" Grid.Row="4"/>
     </Grid>
 </Page>

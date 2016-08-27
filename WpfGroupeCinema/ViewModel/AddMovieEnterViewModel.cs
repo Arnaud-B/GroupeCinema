@@ -46,7 +46,6 @@ namespace WpfGroupeCinema.ViewModel
                 Room room = new Room();
                 room = (Room)e.AddedItems[0];
                 this.room = room;
-                Console.WriteLine(room.Id);
             }
         }
 
@@ -54,39 +53,68 @@ namespace WpfGroupeCinema.ViewModel
         {
             Cinema cinema = this.cinema;
 
-            if (Regex.IsMatch(this.AddMovieEnterView.addMovieUserControl.Length, @"^\d+$") && Regex.IsMatch(this.AddMovieEnterView.addMovieUserControl.RentTime, @"^\d+$"))
+            if (Regex.IsMatch(this.AddMovieEnterView.addMovieUserControl.Length, @"^\d+$")) 
             {
-
-
-                Movie movie = new Movie();
-                movie.Name = this.AddMovieEnterView.addMovieUserControl.Name;
-                movie.Author = this.AddMovieEnterView.addMovieUserControl.Author;
-                movie.Length = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.Length);
-                movie.ReleaseDate = DateTime.Now;
-
-                await Task.Factory.StartNew(() =>
+                if (Regex.IsMatch(this.AddMovieEnterView.addMovieUserControl.RentTime, @"^\d+$"))
                 {
-                    MySQLManager<Movie> manager = new MySQLManager<Movie>(DataConnectionResource.LOCALMYQSL);
-                    manager.Insert(movie);
-                });
+                    Movie movie = new Movie();
+                    movie.Name = this.AddMovieEnterView.addMovieUserControl.Name;
+                    movie.Author = this.AddMovieEnterView.addMovieUserControl.Author;
+                    movie.Length = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.Length);
+                    movie.ReleaseDate = DateTime.Now;
 
-                if (this.room != null)
-                {
-                    MovieRoom movieRoom = new MovieRoom();
-                    movieRoom.RentTime = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.RentTime);
-                    movieRoom.Movie_id = movie.Id;
-                    movieRoom.Room_id = this.room.Id;
-                    movieRoom.Cinema_id = this.cinema.Id;
-                    movieRoom.StartDate = DateTime.Now;
                     await Task.Factory.StartNew(() =>
                     {
-                        MySQLManager<MovieRoom> manager1 = new MySQLManager<MovieRoom>(DataConnectionResource.LOCALMYQSL);
-                        manager1.Insert(movieRoom);
+                        MySQLManager<Movie> manager = new MySQLManager<Movie>(DataConnectionResource.LOCALMYQSL);
+                        manager.Insert(movie);
                     });
+
+                    if (this.room != null)
+                    {
+                        MovieRoom movieRoom = new MovieRoom();
+                        movieRoom.RentTime = Int32.Parse(this.AddMovieEnterView.addMovieUserControl.RentTime);
+                        movieRoom.Movie_id = movie.Id;
+                        movieRoom.Room_id = this.room.Id;
+                        movieRoom.Cinema_id = this.cinema.Id;
+                        movieRoom.StartDate = DateTime.Now;
+                        await Task.Factory.StartNew(() =>
+                        {
+                            MySQLManager<MovieRoom> manager1 = new MySQLManager<MovieRoom>(DataConnectionResource.LOCALMYQSL);
+                            manager1.Insert(movieRoom);
+                        });
+
+                        Success(movie.Name, this.room.Number);
+                    }
                 }
+                else
+                {
+                    Fail(1);
+                }
+            }
+            else
+            {
+                Fail(2);
             }
         }
 
+        private void Success(String name, Int32 number)
+        {
+            MessageBoxResult result = MessageBox.Show("Your movie " + name + " has been add and assigned to room "+number, "GroupeCinema");
+        }
+
+        private void Fail(int n)
+        {
+            String name = "";
+            if(n == 1)
+            {
+                name = "rentTime";
+            }
+            else
+            {
+                name = "length";
+            }
+            MessageBoxResult result = MessageBox.Show("Wrong syntax for field : "+name, "GroupeCinema");
+        }
 
         private async void SetupRoomList(Cinema cinema)
         {
@@ -98,8 +126,6 @@ namespace WpfGroupeCinema.ViewModel
 
             });
 
-
-            Console.WriteLine(results.Count);
             if (results != null)
             {
                 this.AddMovieEnterView.roomListUserControl.LoadItems(results, cinema);

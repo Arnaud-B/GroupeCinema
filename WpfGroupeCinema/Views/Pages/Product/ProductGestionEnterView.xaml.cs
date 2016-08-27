@@ -23,6 +23,9 @@ namespace WpfGroupeCinema.Views
     {
         private Cinema cinema;
         private ProductGestionEnterViewModel productGestionEnterViewModel;
+        private Eatable eatable;
+        private Drinkable drinkable;
+
         public ProductGestionEnterViewModel ProductGestionEnterViewModel
         {
             get { return productGestionEnterViewModel; }
@@ -38,9 +41,47 @@ namespace WpfGroupeCinema.Views
         {
             InitializeComponent();   
             this.cinema = cinema;
-            this.productGestionEnterViewModel = new ProductGestionEnterViewModel(this,cinema);
+            this.productGestionEnterViewModel = new ProductGestionEnterViewModel(this, cinema);
+
+
+            ProductGestionEnterViewModel.ProductGestionEnterView.eatableListUserControl.eatablesListView.SelectionChanged += EatableListView_Changed;
+            ProductGestionEnterViewModel.ProductGestionEnterView.drinkableListUserControl.drinkablesListView.SelectionChanged += DrinkableListView_Changed;
+
+            ProductGestionEnterViewModel.ProductGestionEnterView.chooseProductUserControl.btnChoose.Click += BtnChoose_Click;
             ProductGestionEnterViewModel.ProductGestionEnterView.cinemaUserControl.Cinema = cinema;
             ProductGestionEnterViewModel.ProductGestionEnterView.homeUserControl.BtnHome.Click += BtnNavigate_Click;
+        }
+
+        private void EatableListView_Changed(object sender, SelectionChangedEventArgs e)
+        {
+            if ((Eatable)e.AddedItems[0] != null)
+            {
+                Eatable eatable = new Eatable();
+                eatable = (Eatable)e.AddedItems[0];
+                this.eatable = eatable;
+            }
+        }
+
+        private void DrinkableListView_Changed(object sender, SelectionChangedEventArgs e)
+        {
+            if ((Drinkable)e.AddedItems[0] != null)
+            {
+                Drinkable drinkable = new Drinkable();
+                drinkable = (Drinkable)e.AddedItems[0];
+                this.drinkable = drinkable;
+            }
+        }
+
+        private void BtnChoose_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.eatable != null)
+            {
+                this.NavigationService.Navigate(new SelectEatableEnterView(this.cinema, this.eatable));
+            }
+            else if (this.drinkable != null)
+            {
+                this.NavigationService.Navigate(new SelectDrinkableEnterView(this.cinema, this.drinkable));
+            }
         }
 
         private void BtnNavigate_Click(object sender, RoutedEventArgs e)
