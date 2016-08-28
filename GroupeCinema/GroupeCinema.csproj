@@ -104,8 +104,6 @@
     <Compile Include="Enums\DataConnectionRessource.cs" />
     <Compile Include="Enums\EnumString.cs" />
     <Compile Include="Enums\StringValue.cs" />
-    <Compile Include="Event\ClassWithEnvent2.cs" />
-    <Compile Include="Event\ClassWithEvent.cs" />
     <Compile Include="faker\IFakerLoader.cs" />
     <Compile Include="Json\Sandbox.cs" />
     <Compile Include="Logger\Logger.cs" />
@@ -119,7 +117,9 @@
     <None Include="ClassDiagram4.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Event\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
