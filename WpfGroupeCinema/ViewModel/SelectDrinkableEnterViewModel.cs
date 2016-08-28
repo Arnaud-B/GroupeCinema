@@ -56,20 +56,12 @@ namespace WpfGroupeCinema.ViewModel
                         drinkable.BuyDate = DateTime.Now;
                         drinkable.Cinema_id = cinema.Id;
 
-                        /*await Task.Factory.StartNew(() =>
-                        {
-                            WebServiceManager<Eatable> manager1 = new WebServiceManager<Eatable>(DataConnectionResource.LOCALAPI);
-                            manager1.Post(eatable);
-                        });*/
 
                         await Task.Factory.StartNew(() =>
                         {
                             MySQLManager<Drinkable> manager = new MySQLManager<Drinkable>(DataConnectionResource.LOCALMYQSL);
                             manager.Update(drinkable);
                         });
-                        Console.WriteLine(drinkable.Price);
-                        Console.WriteLine(drinkable.Liter);
-                        Console.WriteLine(drinkable.Number);
                         Success(drinkable.Name);
                     }
                     else

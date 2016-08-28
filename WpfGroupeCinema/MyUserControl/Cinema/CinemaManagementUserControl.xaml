@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
         <Label Content="Name" FontSize="15" Grid.Row="0" Grid.Column="0" />
         <TextBlock x:Name="cinemaNameTxtB" Text="{Binding Cinema.Name}" Grid.Row="0" Grid.Column="1" FontSize="18"/>

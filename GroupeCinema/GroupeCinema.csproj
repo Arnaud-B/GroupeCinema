@@ -102,7 +102,6 @@
     <Compile Include="Enums\EnumCrud.cs" />
     <Compile Include="Logger\AlertMode.cs" />
     <Compile Include="Enums\DataConnectionRessource.cs" />
-    <Compile Include="Enums\Enums1.cs" />
     <Compile Include="Enums\EnumString.cs" />
     <Compile Include="Enums\StringValue.cs" />
     <Compile Include="Event\ClassWithEnvent2.cs" />

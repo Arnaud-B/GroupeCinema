@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WpfGroupeCinema.Views;
-using WpfGroupeCinema.Views.Pages;
+using WpfGroupeCinema.Views;
 using System.Windows.Controls;
 using System.Windows;
 
@@ -67,8 +67,6 @@ namespace WpfGroupeCinema.ViewModel
 
             });
 
-
-           
             if (results != null)
             {
                 this.productGestionEnterView.drinkableListUserControl.LoadItems(results, cinema);

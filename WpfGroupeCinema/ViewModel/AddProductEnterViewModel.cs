@@ -22,31 +22,8 @@ namespace WpfGroupeCinema.ViewModel
         public AddProductEnterViewModel(AddProductEnterView addProductEnterView)
         {
             this.addProductEnterView = addProductEnterView;
-            //this.AddProductEnterView.cinemaUserControl.Cinema = setUpCinema();
         }
 
-        public AddProductEnterViewModel(Cinema cinema)
-        {
-            Console.WriteLine(cinema.Name);
-            //setUpCinemaChoose(cinema);
-
-
-        }
-        private async void setUpCinemaChoose(Cinema cinema)
-        {
-            Cinema results = new Cinema();
-            await Task.Factory.StartNew(() =>
-            {
-                MySQLManager<Cinema> manager = new MySQLManager<Cinema>(DataConnectionResource.LOCALMYQSL);
-                results = manager.Get(cinema.Id).Result as Cinema;
-            });
-
-            if (results != null)
-            {
-                //this.addProductEnterView = addProductEnterView;
-                //this.AddProductEnterView.cinemaUserControl.Cinema = setUpCinema();
-            }
-        }
 
     }
 }

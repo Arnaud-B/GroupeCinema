@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using WpfGroupeCinema.Views;
-using WpfGroupeCinema.Views.Pages;
+using WpfGroupeCinema.Views;
 
 namespace WpfGroupeCinema.ViewModel
 {
@@ -32,8 +32,6 @@ namespace WpfGroupeCinema.ViewModel
 
             this.HomeEnterView.cinemaListUserControl.cinemasListView.SelectionChanged += CinemasListView_SelectionChanged;
 
-            Logs();
-
             SetupCinemaList();
         }
         private async void SetupCinemaList()
@@ -46,8 +44,8 @@ namespace WpfGroupeCinema.ViewModel
                 
             });
 
-            //Crud<Cinema> manager5 = new Crud<Cinema>();
-            //results = manager5.Get().Result as List<Cinema>;
+            //Crud<Cinema> manager = new Crud<Cinema>();
+            //results = manager.Get().Result as List<Cinema>;
 
             if (results != null)
             {
@@ -74,20 +72,6 @@ namespace WpfGroupeCinema.ViewModel
                 this.homeEnterView.cinemaUserControl.Cinema = (Cinema)e.AddedItems[0];                
             }
         }
-        
-        
-        private void Logs()
-        {
-            //Logger logger = new Logger(LogMode.EXTERNAL, AlertMode.MESSAGE_BOX);
-            //logger.Log("Bienvenue sur le groupement de cinema");
-            /*MessageBoxResult result = MessageBox.Show("Do you want to close this window?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (result == MessageBoxResult.Yes)
-            {
-                Application.Current.Shutdown();
-            }*/
-            //MessageBoxResult result = MessageBox.Show("Bienvenue sur le groupement de cinema", "GroupeCinema");
-        }
-
         
     }
 }

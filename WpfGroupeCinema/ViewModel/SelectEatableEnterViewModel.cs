@@ -57,12 +57,6 @@ namespace WpfGroupeCinema.ViewModel
                         eatable.BuyDate = DateTime.Now;
                         eatable.Cinema_id = cinema.Id;
 
-                        /*await Task.Factory.StartNew(() =>
-                        {
-                            WebServiceManager<Eatable> manager1 = new WebServiceManager<Eatable>(DataConnectionResource.LOCALAPI);
-                            manager1.Post(eatable);
-                        });*/
-
                         await Task.Factory.StartNew(() =>
                         {
                             MySQLManager<Eatable> manager = new MySQLManager<Eatable>(DataConnectionResource.LOCALMYQSL);

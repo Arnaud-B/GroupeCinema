@@ -40,8 +40,6 @@ namespace WpfGroupeCinema.ViewModel
                 results = manager.Get(cinema.Id).Result as Cinema;
             });
 
-           
-
 
             if (results != null)
             {

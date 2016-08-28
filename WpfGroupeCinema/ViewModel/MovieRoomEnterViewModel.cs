@@ -52,8 +52,7 @@ namespace WpfGroupeCinema.ViewModel
                     tmp.Add(movieRoom);
                 }
             }
-         
-            Console.WriteLine(results.Count);
+
             if (results != null && tmp != null)
             {
                 this.movieRoomEnterView.movieListUserControl.LoadItems(results, tmp);

@@ -105,7 +105,6 @@ namespace WpfGroupeCinema.ViewModel
                 }
             }
 
-            Console.WriteLine(results.Count);
             if (results != null && tmp != null)
             {
 

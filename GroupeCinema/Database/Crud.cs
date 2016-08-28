@@ -10,9 +10,7 @@ using System.Threading.Tasks;
 namespace GroupeCinema.Database
 {
     
-    //public class MySQLManager<TEntity> : DbContext where TEntity : class
-    ///public MysqlOrApi(Enum value, TEntity item) where TEntity : class
-    public class Crud<TEntity> where TEntity : class
+    public class Crud<TEntity> : DbContext where TEntity : class
     {
 
         public Crud()
@@ -135,7 +133,7 @@ namespace GroupeCinema.Database
             {
                 await Task.Factory.StartNew(() =>
                 {
-                    MySQLManager<List<TEntity>> manager5 = new MySQLManager<List<TEntity>>(DataConnectionResource.LOCALMYQSL);
+                    MySQLManager<List<TEntity>> manager5 = new MySQLManager<List<TEntity>>(DataConnectionResource.GENERICMYSQL);
                     results = manager5.Get().Result as List<TEntity>;
                 });
             }
